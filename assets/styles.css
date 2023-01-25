@@ -1,0 +1,201 @@
+/**
+ * code (c) 2023 adrian demleitner, thgie.ch
+ * design (c) 2023 sifon.ch
+ * illustrations (c) 2023 fabienne bartel
+ */
+
+/* css reset */
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* setup */
+:root {
+    --red: #ff0000;
+}
+
+body {
+    background-color: var(--red);
+    font-family: 'suisse-intl', Arial, sans-serif;
+}
+.cond {
+    font-family: 'suisse-intl-cond', Arial, sans-serif;
+}
+.mono {
+    font-family: 'suisse-intl-mono', monospace
+}
+.bold {
+    font-weight: bold;
+}
+.medium {
+    font-weight: 500;
+}
+.italic {
+    font-style: italic;
+}
+
+/* typographical elements */
+h2 {
+    max-width: 1100px;
+    margin: 0 20% 1rem 20%;
+    padding: 0.25rem 1rem;
+    border: 1px solid white;
+    border-radius: 48px;
+    font-size: 2.4375rem;
+    line-height: 3rem;
+    color: white;
+}
+p.date {
+    font-size: 6.9375rem;
+    line-height: 6.5625rem;
+    color: black;
+}
+p.provisorium {
+    display: inline-block;
+    margin: 0 1rem 1rem;
+    padding: 0.25rem 1rem;
+    border: 1px solid white;
+    border-radius: 36px;
+    font-size: 30px;
+    line-height: 36px;
+    transition: transform 0.25s;
+}
+p.provisorium.french {
+    margin: 0 30% 1rem 5%;
+    color: var(--red);
+    background-color: white;
+    transform: rotate(1deg);
+}
+p.provisorium.french:hover {
+    transform: rotate(-2deg);
+}
+p.provisorium.german {
+    margin: 0 20% 1rem 10%;
+    color: black;
+    background-color: var(--red);
+    transform: rotate(-1deg)
+}
+p.provisorium.german:hover {
+    transform: rotate(2deg);
+}
+a.button.benevoles {
+    position: absolute;
+    right: 1rem;
+    top: -200px;
+    width: 315px;
+    height: 300px;
+    z-index: 100;
+}
+a.button.benevoles img {
+    width: 100%;
+    transition: transform .25s;
+}
+a.button.benevoles span {
+    position: absolute;
+    left: 40px;
+    top: 65px;
+    font-size: 97px;
+    line-height: 90px;
+    color: white;
+    transition: transform .25s;
+}
+a.button.benevoles:hover img {
+    transform: rotate(-35deg) scale(0.6);
+}
+a.button.benevoles:hover span {
+    transform: rotate(-15deg);
+}
+
+/* layout */
+header {
+    position: relative;
+    z-index: 200;
+}
+.content {
+    padding: 1rem 1rem 5rem;
+}
+.logo {
+    display: inline-block;
+    margin: 0 auto 2rem;
+    padding: 220px 10rem 0;
+}
+.date-wrapper {
+    position: absolute;
+    top: 90px;
+    left: 70px;
+}
+.button-wrapper {
+    position: relative;
+}
+
+/* mobile queries */
+@media (max-width: 1080px) {
+    h2 {
+        margin: 0 0 1rem;
+    }
+    p.provisorium.french,
+    p.provisorium.german {
+        margin: 0 0 0.5rem;
+    }
+    a.button.benevoles {
+        top: -150px;
+        width: 165px;
+        height: 160px;
+    }
+    a.button.benevoles span {
+        top: 35px;
+        left: 25px;
+        font-size: 50px;
+        line-height: 46px;
+    }
+    
+    .date-wrapper {
+        display: flex;
+        justify-content: center;
+        position: static;
+        margin: 5rem 0;
+    }
+    .button-wrapper {
+        top: 10px;
+        right: -20px;
+    }
+    .logo {
+        padding: 3rem 1rem 0;
+    }
+}
+
+@media (max-width: 580px) {
+    h2 {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+    p.date {
+        font-size: 69px;
+        line-height: 65px;
+    }
+    p.provisorium {
+        font-size: 1rem;
+        line-height: 1.25rem;
+    }
+}

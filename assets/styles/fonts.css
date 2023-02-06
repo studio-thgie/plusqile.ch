@@ -1,0 +1,136 @@
+/* regular */
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-Regular-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-Regular-WebS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-RegularItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-RegularItalic-WebS.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-Bold-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-Bold-WebS.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-BoldItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-BoldItalic-WebS.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-Light-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-Light-WebS.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-LightItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-LightItalic-WebS.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-Black-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-Black-WebS.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl';
+    src: url('/assets/fonts/SuisseIntl-BlackItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntl-BlackItalic-WebS.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+/* condensed */
+@font-face {
+    font-family: 'suisse-intl-cond';
+    src: url('/assets/fonts/SuisseIntlCond-Regular-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlCond-Regular-WebS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl-cond';
+    src: url('/assets/fonts/SuisseIntlCond-RegularItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlCond-RegularItalic-WebS.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse-intl-cond';
+    src: url('/assets/fonts/SuisseIntlCond-Medium-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlCond-Medium-WebS.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl-cond';
+    src: url('/assets/fonts/SuisseIntlCond-MediumItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlCond-MediumItalic-WebS.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'suisse-intl-cond';
+    src: url('/assets/fonts/SuisseIntlCond-Thin-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlCond-Thin-WebS.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl-cond';
+    src: url('/assets/fonts/SuisseIntlCond-ThinItalic-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlCond-ThinItalic-WebS.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+}
+
+
+/* mono */
+@font-face {
+    font-family: 'suisse-intl-mono';
+    src: url('/assets/fonts/SuisseIntlMono-Regular-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlMono-Regular-WebS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl-mono';
+    src: url('/assets/fonts/SuisseIntlMono-Bold-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseIntlMono-Bold-WebS.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+/* works */
+@font-face {
+    font-family: 'suisse-intl-works';
+    src: url('/assets/fonts/SuisseWorks-Regular-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseWorks-Regular-WebS.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'suisse-intl-works';
+    src: url('/assets/fonts/SuisseWorks-Bold-WebS.woff2') format('woff2'),
+        url('/assets/fonts/SuisseWorks-Bold-WebS.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}

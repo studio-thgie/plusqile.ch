@@ -1,0 +1,44 @@
+@import url(fonts.css);
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .bg-red {
+        background-color: #f00;
+    }
+    .text-17rem {
+        font-size: 17rem;
+        line-height: 1;
+    }
+    .text-12rem {
+        font-size: 12rem;
+        line-height: 1;
+    }
+    .text-13rem {
+        font-size: 13rem;
+        line-height: 1;
+    }
+    .border-20 {
+        border-width: 20px;
+    }
+}
+
+/* super custom stuff */
+a.btn-benevoles {
+    width: 40vw;
+    height: 40vw;
+}
+a.btn-benevoles img {
+    transition: transform .25s;
+}
+a.btn-benevoles span {
+    transition: transform .25s;
+}
+a.btn-benevoles:hover img {
+    transform: rotate(-35deg) scale(0.6);
+}
+a.btn-benevoles:hover span {
+    transform: rotate(-15deg);
+}

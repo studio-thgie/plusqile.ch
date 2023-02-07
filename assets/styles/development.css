@@ -8,6 +8,12 @@
     .bg-red {
         background-color: #f00;
     }
+    .text-red {
+        color: #f00;
+    }
+    .border-red {
+        border-color: #f00;
+    }
     .text-17rem {
         font-size: 17rem;
         line-height: 1;

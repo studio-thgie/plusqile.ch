@@ -18,17 +18,28 @@
         font-size: 17rem;
         line-height: 1;
     }
+    .text-13rem {
+        font-size: 13rem;
+        line-height: 1;
+    }
     .text-12rem {
         font-size: 12rem;
         line-height: 1;
     }
-    .text-13rem {
-        font-size: 13rem;
+    .text-10rem {
+        font-size: 10rem;
         line-height: 1;
     }
     .border-20 {
         border-width: 20px;
     }
+    .rounded-100px {
+        border-radius: 100px;
+    }
+}
+
+main p {
+    margin-bottom: 2rem;
 }
 
 /* super custom stuff */

@@ -11,6 +11,6 @@ kirby/
 media/
 
 #
-acounts/**
-cache/**
-sessions/*.sess
+site/accounts/**
+site/cache/**
+site/sessions/*.sess

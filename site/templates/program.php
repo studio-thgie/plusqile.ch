@@ -10,7 +10,7 @@
                 <span class="font-mono text-6xl font-bold title"><?= $event->title() ?></span>
             </span>
             <div class="mb-8">
-                <span class="block text-5xl artists text-red"><?= $event->artist()->toPage()->title() ?></span>
+                <a href="<?= $event->artist()->toPage()->url() ?>" class="block text-5xl artists text-red hover:underline"><?= $event->artist()->toPage()->title() ?></a>
                 <span class="block text-4xl category"><?= $event->category() ?></span>
                 <span class="text-4xl meta">
                     <span class="font-light duration"><?= $event->duration() ?></span> / 

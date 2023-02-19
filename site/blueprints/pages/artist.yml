@@ -1,0 +1,30 @@
+title: Artist
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          description:
+            type: writer
+            size: large
+          website:
+            type: url
+          events:
+            type: pages
+            template: event
+  sidebar:
+    width: 1/3
+    sections:
+      images:
+        type: fields 
+        fields:
+          cover:
+            type: files
+            multiple: false
+            layout: cards
+            image:
+              cover: true
+

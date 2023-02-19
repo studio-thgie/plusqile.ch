@@ -1,0 +1,7 @@
+title: Artists
+
+sections:
+  pages:
+    type: pages
+    template: artist
+    layout: cards

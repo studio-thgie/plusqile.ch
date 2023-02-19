@@ -1,0 +1,42 @@
+title: Event
+
+columns:
+  main:
+    width: 2/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          artist:
+            type: pages
+            template: artist
+            max: 1
+          description:
+            type: writer
+            size: large
+  sidebar:
+    width: 1/3
+    sections:
+      images:
+        type: fields 
+        fields:
+          cover:
+            type: files
+            multiple: false
+            layout: cards
+            image:
+              cover: true
+          category:
+            type: select
+            options:
+              circque: Circque
+          duration:
+            type: text
+          age:
+            type: text
+          language:
+            type: select
+            options:
+              german: DE
+              french: FR
+

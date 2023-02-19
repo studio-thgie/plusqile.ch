@@ -9,3 +9,8 @@ node_modules
 content/
 kirby/
 media/
+
+#
+acounts/**
+cache/**
+sessions/*.sess

@@ -1,2 +1,11 @@
 .DS_Store
+.editorconfig
+.htaccess
+composer.json
+index.php
+
+#
 node_modules
+content/
+kirby/
+media/

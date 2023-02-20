@@ -11,7 +11,7 @@
     <main class="px-4 mx-auto mb-28 max-w-7xl">
         <div class="flex flex-col content-center items-center mb-14">
             <h1 class="inline-block flex-shrink px-10 mb-12 font-mono font-bold bg-white rounded-full border border-red text-10rem"><?= $page->title() ?></h1>
-            <img class="inline-block rounded-full" src="/assets/temp/artist_header.png" alt="Artist Impression">
+            <img class="inline-block rounded-full" src="<?= $page->cover()->toFile()->url() ?>" alt="Artist Impression">
         </div>
         <div class="text-3xl font-light">
             <?= $page->description() ?>
@@ -22,8 +22,7 @@
     </main>
 
     <?php
-
-    $events =  $page->events()->toPages();
+    $events = $page->events()->toPages();
     foreach($events as $event): ?>
     
     <section class="flex gap-10 px-4 mx-auto max-w-7xl">
@@ -61,7 +60,7 @@
             </div>
         </div>
         <div class="w-2/5">
-            <img class="rounded-full" src="/assets/temp/artist_impression.png" alt="Artist Impression">
+            <img class="rounded-full" src="<?= $event->cover()->toFile()->url() ?>" alt="Artist Impression">
         </div>
     </section>
         

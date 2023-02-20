@@ -1,0 +1,14 @@
+title: Gallery
+
+columns:
+  main:
+    sections:
+      images:
+        type: fields 
+        fields:
+          images:
+            type: files
+            layout: cards
+            image:
+              cover: true
+

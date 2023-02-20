@@ -37,7 +37,7 @@
                 </table>
             </div>
             <div>
-                <img class="rounded-full" src="/assets/temp/programme_1.png" alt="Programme 1">
+                <img class="rounded-full" src="<?= $event->cover()->toFile()->url() ?>" alt="Programme 1">
             </div>
         </section>
         <?php endforeach ?>

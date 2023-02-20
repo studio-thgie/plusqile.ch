@@ -1,9 +1,9 @@
-title: Artists
+title: Galleries
 
 sections:
-  pages:
+  images:
     type: pages
-    template: artist
+    template: gallery
     layout: cards
     image:
       cover: true

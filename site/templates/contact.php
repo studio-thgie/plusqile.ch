@@ -10,10 +10,10 @@
 
         <main class="px-4 mx-auto max-w-7xl">
             <div class="text-center">
-                <h1 class="inline-block px-10 mb-12 font-mono text-8xl font-bold bg-white rounded-full border border-red">Contact</h1>
+                <h1 class="inline-block px-10 mb-12 font-mono text-8xl font-bold bg-white rounded-full border border-red"><?= $page->title() ?></h1>
             </div>
-            <div class="mb-8 max-w-5xl">
-                <p class="text-5xl font-light">Pour nous contacter, merci de nous écrire à l’adresse info(at)plusqile.ch ou de remplir le formulaire de contact avec vos coordonnées complètes. Nous reprendrons contact avec vous.</p>
+            <div class="mb-8 max-w-5xl text-5xl font-light">
+                <?= $page->text_bottom() ?>
             </div>
             <div class="flex gap-8 mb-9">
                 <div class="w-1/2">
@@ -36,16 +36,26 @@
                     </form>
                 </div>
                 <div class="w-1/2">
-                    <img class="w-full scale-125" src="/assets/illustrations/07_CONTACT/CONTACT_perso-02.svg" alt="Illustration Contact Form">
+                    <img class="w-full scale-125" src="" alt="">
+                    
+                    <!-- <div class="flex items-end w-1/2">
+                        <div class="relative">
+                            <a class="inline-block max-w-lg italic btn-benevoles font-condensed" href="https://plusqile23.gevma.ch" target="_blank">
+                                <img class="w-full" src="/assets/graphics/button.svg" alt="Bénévoles Button Background">
+                                <span class="absolute top-24 left-24 text-white text-10rem">Béné-<br>Voles</span>
+                            </a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
-            <div class="mb-5 max-w-5xl">
-                <p class="mb-4 text-5xl font-light">Le festival se déroule au Pré-Neptune de Bienne, au bord du lac de Bienne.</p>
-                <p class="text-5xl font-light">Svp, venez en vélo, en transports publics (bus n°11) ou à pied. Il y a très peu de places de parc aux alentours (interdit de station­ner sur le site!) </p>
+            <div class="mb-5 max-w-5xl text-5xl font-light">
+                <?= $page->text_bottom() ?>
             </div>
+            <?php if($page->type() == 'contact'): ?>
             <div>
                 <img class="rounded-full border border-red" src="/assets/temp/map.png" alt="Map">
             </div>
+            <?php endif ?>
         </main>
 
 <?php snippet('footer'); ?>

@@ -872,16 +872,28 @@ video {
   margin-right: auto;
 }
 
+.mb-12 {
+  margin-bottom: 3rem;
+}
+
+.mt-64 {
+  margin-top: 16rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mb-28 {
   margin-bottom: 7rem;
 }
 
 .mb-14 {
   margin-bottom: 3.5rem;
-}
-
-.mb-12 {
-  margin-bottom: 3rem;
 }
 
 .mb-5 {
@@ -892,20 +904,12 @@ video {
   margin-bottom: 2rem;
 }
 
-.mt-10 {
-  margin-top: 2.5rem;
-}
-
 .mr-16 {
   margin-right: 4rem;
 }
 
 .mb-9 {
   margin-bottom: 2.25rem;
-}
-
-.mb-4 {
-  margin-bottom: 1rem;
 }
 
 .mb-24 {
@@ -918,14 +922,6 @@ video {
 
 .mt-2 {
   margin-top: 0.5rem;
-}
-
-.mb-10 {
-  margin-bottom: 2.5rem;
-}
-
-.mt-64 {
-  margin-top: 16rem;
 }
 
 .box-border {
@@ -1040,12 +1036,12 @@ video {
   width: 50%;
 }
 
-.max-w-7xl {
-  max-width: 80rem;
-}
-
 .max-w-5xl {
   max-width: 64rem;
+}
+
+.max-w-7xl {
+  max-width: 80rem;
 }
 
 .max-w-xl {
@@ -1571,12 +1567,12 @@ video {
   gap: 1rem;
 }
 
-.gap-10 {
-  gap: 2.5rem;
-}
-
 .gap-2 {
   gap: 0.5rem;
+}
+
+.gap-10 {
+  gap: 2.5rem;
 }
 
 .gap-8 {
@@ -1587,8 +1583,8 @@ video {
   gap: 1.25rem;
 }
 
-.gap-32 {
-  gap: 8rem;
+.gap-12 {
+  gap: 3rem;
 }
 
 .gap-7 {
@@ -2009,14 +2005,14 @@ video {
   border-color: rgb(255 255 255 / var(--tw-border-opacity));
 }
 
-.bg-black {
-  --tw-bg-opacity: 1;
-  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
-}
-
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
 }
 
 .bg-\[rgb\(255\2c 0\2c 0\)\] {
@@ -2138,6 +2134,10 @@ video {
   padding: 1rem;
 }
 
+.p-1 {
+  padding: 0.25rem;
+}
+
 .px-14 {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -2183,14 +2183,14 @@ video {
   padding-bottom: 0.5rem;
 }
 
-.py-4 {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-}
-
 .px-8 {
   padding-left: 2rem;
   padding-right: 2rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-3 {
@@ -2198,8 +2198,9 @@ video {
   padding-bottom: 0.75rem;
 }
 
-.pl-4 {
-  padding-left: 1rem;
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .pl-8 {
@@ -2288,14 +2289,14 @@ video {
   line-height: 2.25rem;
 }
 
-.text-4xl {
-  font-size: 2.25rem;
-  line-height: 2.5rem;
-}
-
 .text-7xl {
   font-size: 4.5rem;
   line-height: 1;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
 }
 
 .text-8xl {
@@ -2787,6 +2788,10 @@ video {
 
 .rounded-100px {
   border-radius: 100px;
+}
+
+.\[hostname\:port\] {
+  hostname: port;
 }
 
 main p {

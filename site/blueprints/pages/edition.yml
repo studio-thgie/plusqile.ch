@@ -1,0 +1,15 @@
+title: Edition
+
+columns:
+  main:
+    sections:
+      fields:
+        type: fields
+        fields:
+          program:
+            type: files
+            multiple: false
+          gallery:
+            type: pages
+            template: gallery
+            max: 1

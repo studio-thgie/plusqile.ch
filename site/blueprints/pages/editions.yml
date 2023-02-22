@@ -1,0 +1,6 @@
+title: Editions
+
+sections:
+  editions:
+    type: pages
+    template: edition

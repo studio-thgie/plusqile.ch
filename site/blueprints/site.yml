@@ -1,5 +1,56 @@
 title: Site
 
-sections:
-  pages:
-    type: pages
+columns:
+  main:
+    width: 2/3
+    sections:
+      artists:
+        type: pages
+        parent: site.find('artist')
+        template: artist
+        layout: cards
+        image:
+          cover: true
+      events:
+        type: pages
+        parent: site.find('event')
+        template: event
+        layout: cards
+        image:
+          cover: true
+  sidebar:
+    width: 1/3
+    sections:
+      pages:
+        type: pages
+      menus:
+        type: fields 
+        fields:
+          main_menu:
+            label: Main Menu
+            type: pages
+            fields:
+              pageLink:
+                type: pages
+                label: Page link
+                max: 1
+          footer_menu:
+            label: Footer Menu
+            type: structure
+            fields:
+              linkTitle:
+                type: text
+                label: Menu item title
+              isExternal:
+                type: toggle
+              pageLink:
+                type: pages
+                label: Page link
+                max: 1
+                when:
+                  isExternal: false
+              externalLink:
+                type: url
+                label: External URL
+                when:
+                  isExternal: true

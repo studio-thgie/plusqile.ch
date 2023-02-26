@@ -15,4 +15,8 @@ columns:
             type: writer
   sidebar:
     width: 1/3
+    sections:
+      pages:
+        type: pages
+        template: contact
 

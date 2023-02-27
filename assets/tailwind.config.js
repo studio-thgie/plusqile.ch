@@ -17,9 +17,6 @@ module.exports = {
                 'suisse-intl-works'
               ]
             }
-        },
-        screens: {
-          '2xl': {'min': '1601px'},
         }
     },
     plugins: []

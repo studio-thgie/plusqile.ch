@@ -2,20 +2,53 @@ title: Home Page
 
 columns:
   main:
-    width: 2/3
+    width: 1/2
     sections:
       fields:
         type: fields
         fields:
-          text:
-            type: textarea
-            size: huge
+          info_text:
+            label: Info Text
+            type: writer
+          headline:
+            type: writer
   sidebar:
-    width: 1/3
+    width: 1/2
     sections:
       pages:
-        type: pages
-        template: home
-      files:
-        type: files
-
+        type: fields
+        fields:
+          program:
+            type: pages
+            max: 1
+          gallery:
+            type: pages
+            max: 1
+          association_label:
+            label: Association label
+            type: text
+          association:
+            type: pages
+            max: 1
+          become_member:
+            label: Become member
+            type: pages
+            max: 1
+          artists_label:
+            label: Artists label
+            type: text
+          artists:
+            type: pages
+            max: 1
+          benevoles:
+            type: url
+          the_festival:
+            label: The festival
+            type: pages
+            max: 1
+          press:
+            type: pages
+            max: 1
+          editions:
+            type: pages
+            max: 1

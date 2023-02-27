@@ -2,7 +2,7 @@
 
     <?php snippet('nav'); ?>
 
-    <main class="grid grid-cols-2 gap-4 px-4 macy">
+    <main class="grid grid-cols-2 gap-4 m-8 macy">
     <?php foreach($page->children() as $event): ?>
         <section class="mb-20">
             <span class="inline-block px-8 py-3 mb-5 border border-red" style="border-radius: 80px">

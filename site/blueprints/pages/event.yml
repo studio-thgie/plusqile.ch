@@ -7,6 +7,12 @@ columns:
       fields:
         type: fields
         fields:
+          cover:
+            type: files
+            multiple: false
+            layout: cards
+            image:
+              cover: true
           artist:
             type: pages
             template: artist
@@ -20,12 +26,14 @@ columns:
       images:
         type: fields 
         fields:
-          cover:
-            type: files
-            multiple: false
-            layout: cards
-            image:
-              cover: true
+          date:
+            type: date
+          time:
+            type: time
+            display: HH:mm
+            step:
+              unit: minute
+              size: 15
           category:
             type: select
             options:

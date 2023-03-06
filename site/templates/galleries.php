@@ -1,12 +1,6 @@
 <?php snippet('header'); ?>
 
     <?php snippet('nav'); ?>
-        
-    <div class="mx-8 my-12">
-        <a href="javascript:history.back()" aria-label="Back to previous page">
-            <img src="/assets/graphics/back-arrow.svg" alt="Back to previous page">
-        </a>
-    </div>
 
     <div>
         <?php foreach($page->children() as $gallery): ?>

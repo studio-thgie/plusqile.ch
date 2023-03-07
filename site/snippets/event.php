@@ -8,6 +8,7 @@
         <span class="text-base font-bold md:text-5xl time"><?= $event->time()->toDate('H:i') ?></span><br>
         <span class="font-mono text-2xl font-bold md:text-6xl title"><?= $event->title() ?></span>
     </span>
+    <?php if($event->artist()->isNotEmpty()): ?>
     <div class="px-4 mb-8 md:px-8">
         <a href="<?= $event->artist()->toPage()->url() ?>" class="block text-xl md:text-5xl artists text-red hover:underline"><?= $event->artist()->toPage()->title() ?></a>
         <span class="block text-xl md:text-4xl category"><?= $event->category() ?></span>
@@ -17,6 +18,7 @@
             <span class="font-light language"><?= $event->language() ?></span>
         </span>
     </div>
+    <?php endif ?>
     <div class="px-4 mb-8 text-base font-light md:text-4xl md:px-8">
         <?= $event->description() ?>
     </div>

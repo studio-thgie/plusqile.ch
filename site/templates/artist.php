@@ -4,9 +4,7 @@
 
     <main class="px-4 mx-auto mb-28 max-w-7xl">
         <?php snippet('title-default', ['title' => $page->title()]); ?>
-        <div class="flex flex-col content-center items-center mb-14">
-            <img class="inline-block rounded-full" src="<?= $page->cover()->toFile()->url() ?>" alt="Artist Impression">
-        </div>
+        <?php snippet('cover'); ?>
         <div class="text-base font-light md:text-3xl">
             <?= $page->description() ?>
             <p>

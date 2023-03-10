@@ -20,4 +20,4 @@
         <link rel="stylesheet" href="/assets/styles/styles.css">
 
     </head>
-    <body>
+    <body class="overflow-x-hidden">

@@ -4,6 +4,47 @@
 @tailwind components;
 @tailwind utilities;
 
+/* base stuff */
+@layer base {
+    h1 {
+        @apply text-3xl;
+        @apply md:text-10rem;
+        @apply font-mono;
+        @apply font-bold;
+        @apply break-words;
+    }
+    h2 {
+        @apply inline-block;
+        @apply px-10;
+        @apply mb-12;
+        @apply font-mono;
+        @apply text-7xl;
+        @apply font-bold;
+        @apply bg-white;
+        @apply rounded-full;
+        @apply border;
+        @apply border-red;
+    }
+    main p, main ul {
+        @apply text-base;
+        @apply font-light;
+        @apply md:text-3xl;
+        
+        margin-bottom: 2rem;
+    }
+    main ul {
+        @apply pl-8;
+        @apply list-disc;
+        @apply list-outside;
+    }
+    main ul li {
+        @apply pl-2;
+    }
+    main ul li p:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
 @layer utilities {
     .bg-red {
         background-color: #f00;
@@ -36,10 +77,6 @@
     .rounded-100px {
         border-radius: 100px;
     }
-}
-
-main p {
-    margin-bottom: 1rem;
 }
 
 /* super custom stuff */

@@ -8,6 +8,8 @@
             </li>
         <?php endforeach ?>
     </ul>
+    
+    <?php if(!isset($hide_back)){ $hide_back = false; } ?>
 
     <?php if($page->url() != $site->url()): ?>
         <a href="<?= $site->url() ?>" class="block z-20 p-2 mx-8 w-12 bg-black md:bg-transparent md:w-auto md:p-0 md:self-center">
@@ -34,7 +36,7 @@
     </button>
 </nav>
 
-<?php if($page->url() != $site->url()): ?>
+<?php if($page->url() != $site->url() && !$hide_back): ?>
 <div class="hidden mx-8 my-12 md:block">
     <a href="javascript:history.back()" aria-label="Back to previous page">
         <img src="/assets/graphics/back-arrow.svg" alt="Back to previous page">

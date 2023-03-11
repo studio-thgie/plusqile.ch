@@ -3,6 +3,19 @@
     <div class="bg-red">
         <?php snippet('nav'); ?>
 
+        <header>
+            <div class="px-4 mx-auto mt-10 mb-24 max-w-7xl logo">
+                <img src="/assets/graphics/logo.svg" alt="plusQ'île Logo">
+            </div>
+        </header>
+
+        <?php if($page->program()->isNotEmpty()): ?>
+            <?php $program = $page->program()->toPage() ?>
+            <a href="<?= $program->url() ?>" class="fixed -right-14 bottom-28 z-50 py-2 pr-20 pl-10 text-6xl bg-white rounded-full transition-colors hover:text-white hover:bg-red text-red">
+                <?= $page->program_label()->title() ?>
+            </a>
+        <?php endif ?>
+
         <main class="grid grid-cols-2 gap-4 mx-6 mt-10 macy">
             <section>
                 <div class="block font-mono text-8xl font-bold 2xl:text-9xl hover:text-white hover:text-right"><?= $page->info_text() ?></div>
@@ -18,7 +31,9 @@
                 <section>
                     <a href="<?= $gallery->url() ?>">
                         <p class="mb-5 text-4xl font-bold text-center md:text-7xl 2xl:text-8xl font-condensed"><?= $gallery->title() ?></p>
-                        <img class="w-full rounded-full" src="/assets/temp/impression_1.png" alt="Impression 1">
+                        <?php if($page->gallery_cover()->isNotEmpty()): ?>
+                        <img class="w-full rounded-full" src="<?= $page->gallery_cover()->toFile()->url() ?>" alt="Impression 1">
+                        <?php endif ?>
 
                         <ul class="flex gap-7 text-xs md:text-xl">
                             <li><a class="underline" href="#">Gallery</a></li>

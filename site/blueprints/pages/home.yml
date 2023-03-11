@@ -18,9 +18,18 @@ columns:
       pages:
         type: fields
         fields:
+          program_label:
+            label: Program label
+            type: writer
           program:
             type: pages
             max: 1
+          gallery_cover:
+            type: files
+            multiple: false
+            layout: cards
+            image:
+              cover: true
           gallery:
             type: pages
             max: 1

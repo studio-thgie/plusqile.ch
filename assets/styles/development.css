@@ -12,6 +12,8 @@
         @apply font-mono;
         @apply font-bold;
         @apply break-words;
+        @apply border-2;
+        @apply border-red;
     }
     h2 {
         @apply inline-block;
@@ -22,25 +24,25 @@
         @apply font-bold;
         @apply bg-white;
         @apply rounded-full;
-        @apply border;
+        @apply border-2;
         @apply border-red;
     }
-    main p, main ul {
+    main.default p, main.default ul {
         @apply text-base;
         @apply font-light;
         @apply md:text-3xl;
         
         margin-bottom: 2rem;
     }
-    main ul {
+    main.default ul {
         @apply pl-8;
         @apply list-disc;
         @apply list-outside;
     }
-    main ul li {
+    main.default ul li {
         @apply pl-2;
     }
-    main ul li p:last-of-type {
+    main.default ul li p:last-of-type {
         margin-bottom: 0;
     }
 }
@@ -95,4 +97,8 @@ a.btn-benevoles:hover img {
 }
 a.btn-benevoles:hover span {
     transform: rotate(-15deg);
+}
+footer svg {
+    width: 65%;
+    height: 65%;
 }

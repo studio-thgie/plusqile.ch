@@ -23,28 +23,43 @@ columns:
   sidebar:
     width: 1/3
     sections:
-      images:
+      meta:
         type: fields 
         fields:
-          date:
-            type: date
-          time:
-            type: time
-            display: HH:mm
-            step:
-              unit: minute
-              size: 15
+          performances:
+            type: structure
+            fields:
+              date:
+                type: date
+              time:
+                type: time
+                display: HH:mm
+                step:
+                  unit: minute
+                  size: 15
+          duration:
+            type: text
           category:
             type: select
             options:
               circque: Circque
-          duration:
-            type: text
+              concert: Concert
+              acrobatie: Acrobatie
+              compte: Compte
           age:
-            type: text
+            type: select
+            options:
+              3: 3+
+              4: 4+
+              5: 5+
+              6: 6+
+              7: 7+
+              8: 8+
+              0: Toute Âge
           language:
             type: select
             options:
               german: DE
               french: FR
+              nv: NV
 

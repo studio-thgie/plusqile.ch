@@ -4,8 +4,10 @@
         <div class="w-full md:w-3/5">
     <?php endif ?>
 
-    <span class="inline-block px-4 py-0 mb-5 border md:px-8 md:py-3 border-red" style="border-radius: 80px">
-        <span class="text-base font-bold md:text-5xl time"><?= $event->time()->toDate('H:i') ?></span><br>
+    <span class="inline-block px-4 py-0 mb-5 border-2 md:px-8 md:py-3 border-red" style="border-radius: 80px">
+        <?php if($event->performances()->isNotEmpty()): ?>
+        <span class="text-base font-bold md:text-5xl time"><?= $event->performances()->toStructure()->first()->time()->toDate('H:i') ?></span><br>
+        <?php endif ?>
         <span class="font-mono text-2xl font-bold md:text-6xl title"><?= $event->title() ?></span>
     </span>
     <?php if($event->artist()->isNotEmpty()): ?>
@@ -22,21 +24,22 @@
     <div class="px-4 mb-8 text-base font-light md:text-4xl md:px-8">
         <?= $event->description() ?>
     </div>
+    <?php if($event->performances()->isNotEmpty()): ?>
     <div class="px-4 mb-8 text-sm md:text-3xl md:px-8 text-red">
-        <span>Autres représentations:</span>
+        <span>Toutes représentations:</span>
         <table>
+            <?php
+            $performances = $event->performances()->toStructure();
+            foreach ($performances as $performance): ?>
             <tr>
-                <td>Ve</td>
-                <td>10</td>
-                <td>20:00</td>
+                <td class="pr-6"><?= $performance->date()->toDate('D') ?></td>
+                <td class="pr-6"><?= $performance->date()->toDate('d') ?></td>
+                <td><?= $performance->time()->toDate('H:i') ?></td>
             </tr>
-            <tr>
-                <td>Sa</td>
-                <td>11</td>
-                <td>20:30</td>
-            </tr>
+            <?php endforeach ?>
         </table>
     </div>
+    <?php endif ?>
 
     <?php if($horizontal): ?>
         </div>

@@ -1,6 +1,6 @@
 
 <?php if($page->cover()->isNotEmpty()): ?>
     <div class="flex flex-col content-center items-center mb-14">
-        <img class="inline-block rounded-full" src="<?= $page->cover()->toFile()->url() ?>" alt="Cover">
+        <img class="inline-block w-full rounded-full transition-all duration-300 cover" src="<?= $page->cover()->toFile()->url() ?>" alt="Cover">
     </div>
 <?php endif ?>

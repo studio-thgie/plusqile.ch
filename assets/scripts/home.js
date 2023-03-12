@@ -1,14 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let macy = Macy({
-        container: '.macy',
-        waitForImages: false,
-        margin: {
-            x: 40,
-            y: 20
-        },
-        columns: 2,
-        breakAt: {
-            520: 1
-        }
-    });
+    setTimeout(init, 50);
 });
+
+function init() {
+    var iso = new Isotope(document.querySelector('.isotope'), {
+        itemSelector: '.isotope-item',
+        transitionDuration: '0.1s'
+    });
+}

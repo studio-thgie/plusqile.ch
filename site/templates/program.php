@@ -26,36 +26,52 @@
                 $languages[] = $event->language();
             }
         }
+
+        $dates = array_unique($dates);
+        $categories = array_unique($categories);
+        $ages = array_unique($ages);
+        $languages = array_unique($languages);
     ?>
 
     <section class="m-4 md:m-8">
         <ul class="flex gap-3 mb-4 md:mb-16">
             <?php foreach ($dates as $date): ?>
-                <li class="px-4 text-2xl font-medium rounded-full border-2 md:text-6xl border-red hover:bg-red hover:text-white transition-color"><?= $date ?></li>
+                <li>
+                    <button class="px-4 text-2xl font-medium rounded-full border-2 transition-colors md:text-6xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="<?= $date ?>"><?= $date ?></button>
+                </li>
             <?php endforeach ?>
         </ul>
         <ul class="flex gap-3 mb-2">
+            <li>
+                <button class="px-4 text-base text-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all">all</button>
+            </li>
             <?php foreach ($categories as $category): ?>
-                <li class="px-4 text-base rounded-full border-2 md:text-3xl border-red hover:bg-red hover:text-white transition-color"><?= $category ?></li>
+                <li>
+                    <button class="px-4 text-base rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $category ?>"><?= $category ?></button>
+                </li>
             <?php endforeach ?>
         </ul>
         <ul class="flex gap-3">
             <?php foreach ($ages as $age): ?>
-                <li class="px-4 text-base rounded-full border-2 md:text-3xl border-red hover:bg-red hover:text-white transition-color"><?= $age ?></li>
+                <li>
+                    <button class="px-4 text-base rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $age ?>"><?= $age ?></button>
+                </li>
             <?php endforeach ?>
             <?php foreach ($languages as $language): ?>
-                <li class="px-4 text-base rounded-full border-2 md:text-3xl border-red hover:bg-red hover:text-white transition-color"><?= $language ?></li>
+                <li>
+                    <button class="px-4 text-base rounded-full border-2 md:text-3xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="<?= $language ?>"><?= $language ?></button>
+                </li>
             <?php endforeach ?>
         </ul>
     </section>
 
-    <main class="grid grid-cols-2 gap-4 pt-4 m-4 md:m-8 md:mt-16 macy">
+    <main class="grid grid-cols-2 gap-4 pt-4 m-4 md:m-8 md:mt-16 isotope">
         <?php foreach($page->children() as $event): ?>
             <?php snippet('event', ['event' => $event, 'horizontal' => false]); ?>
         <?php endforeach ?>
     </main>
     
-    <script src="/assets/node_modules/macy/dist/macy.js" defer></script>
-    <script src="/assets/scripts/programme.js" defer></script>
+    <script src="/assets/node_modules/isotope-layout/dist/isotope.pkgd.min.js" defer></script>
+    <script src="/assets/scripts/program.js" defer></script>
 
 <?php snippet('footer'); ?>

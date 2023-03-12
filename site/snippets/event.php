@@ -1,4 +1,4 @@
-<section class="<?php if($horizontal): ?>block md:flex gap-10 px-4 mx-auto max-w-7xl<?php endif ?> mb-20">
+<section class="<?php if($horizontal): ?>block md:flex gap-10 px-4 mx-auto max-w-7xl<?php else: ?>isotope-item w-full md:w-1/2<?php endif ?> mb-20 all <?= $event->category() ?> <?= $event->age() ?> <?= $event->language() ?>">
 
     <?php if($horizontal): ?>
         <div class="w-full md:w-3/5">

@@ -788,9 +788,17 @@ main.default ul li p:last-of-type {
   width: 100%;
 }
 
+.\!container {
+  width: 100% !important;
+}
+
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
+  }
+
+  .\!container {
+    max-width: 640px !important;
   }
 }
 
@@ -798,11 +806,19 @@ main.default ul li p:last-of-type {
   .container {
     max-width: 768px;
   }
+
+  .\!container {
+    max-width: 768px !important;
+  }
 }
 
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
+  }
+
+  .\!container {
+    max-width: 1024px !important;
   }
 }
 
@@ -810,11 +826,19 @@ main.default ul li p:last-of-type {
   .container {
     max-width: 1280px;
   }
+
+  .\!container {
+    max-width: 1280px !important;
+  }
 }
 
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
+  }
+
+  .\!container {
+    max-width: 1536px !important;
   }
 }
 
@@ -924,36 +948,8 @@ main.default ul li p:last-of-type {
   left: 6rem;
 }
 
-.top-5 {
-  top: 1.25rem;
-}
-
-.-right-5 {
-  right: -1.25rem;
-}
-
-.-right-10 {
-  right: -2.5rem;
-}
-
 .-right-14 {
   right: -3.5rem;
-}
-
-.top-40 {
-  top: 10rem;
-}
-
-.top-1\/3 {
-  top: 33.333333%;
-}
-
-.bottom-20 {
-  bottom: 5rem;
-}
-
-.bottom-24 {
-  bottom: 6rem;
 }
 
 .bottom-28 {
@@ -1016,10 +1012,6 @@ main.default ul li p:last-of-type {
   margin: 1rem;
 }
 
-.m-8 {
-  margin: 2rem;
-}
-
 .mx-8 {
   margin-left: 2rem;
   margin-right: 2rem;
@@ -1035,14 +1027,9 @@ main.default ul li p:last-of-type {
   margin-right: auto;
 }
 
-.mx-6 {
-  margin-left: 1.5rem;
-  margin-right: 1.5rem;
-}
-
-.my-10 {
-  margin-top: 2.5rem;
-  margin-bottom: 2.5rem;
+.mx-2 {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .mb-12 {
@@ -1089,32 +1076,16 @@ main.default ul li p:last-of-type {
   margin-bottom: 2.25rem;
 }
 
-.mt-2 {
-  margin-top: 0.5rem;
-}
-
 .mb-24 {
   margin-bottom: 6rem;
-}
-
-.mb-16 {
-  margin-bottom: 4rem;
 }
 
 .mb-2 {
   margin-bottom: 0.5rem;
 }
 
-.mt-8 {
-  margin-top: 2rem;
-}
-
-.mt-20 {
-  margin-top: 5rem;
-}
-
-.mb-1 {
-  margin-bottom: 0.25rem;
+.mt-2 {
+  margin-top: 0.5rem;
 }
 
 .box-border {
@@ -1291,6 +1262,16 @@ main.default ul li p:last-of-type {
 
 .border-separate {
   border-collapse: separate;
+}
+
+.translate-x-1\/2 {
+  --tw-translate-x: 50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
 .rotate-45 {
@@ -2422,16 +2403,6 @@ main.default ul li p:last-of-type {
   padding-bottom: 1rem;
 }
 
-.px-20 {
-  padding-left: 5rem;
-  padding-right: 5rem;
-}
-
-.py-1 {
-  padding-top: 0.25rem;
-  padding-bottom: 0.25rem;
-}
-
 .pl-8 {
   padding-left: 2rem;
 }
@@ -2460,12 +2431,12 @@ main.default ul li p:last-of-type {
   padding-left: 1rem;
 }
 
-.pl-10 {
-  padding-left: 2.5rem;
-}
-
 .pr-20 {
   padding-right: 5rem;
+}
+
+.pl-10 {
+  padding-left: 2.5rem;
 }
 
 .pt-4 {
@@ -2580,6 +2551,11 @@ main.default ul li p:last-of-type {
   line-height: 1rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-8xl {
   font-size: 6rem;
   line-height: 1;
@@ -2588,11 +2564,6 @@ main.default ul li p:last-of-type {
 .text-4xl {
   font-size: 2.25rem;
   line-height: 2.5rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .font-bold {
@@ -3007,6 +2978,14 @@ main.default ul li p:last-of-type {
           backdrop-filter: none;
 }
 
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
 .transition-opacity {
   transition-property: opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -3025,12 +3004,12 @@ main.default ul li p:last-of-type {
   transition-duration: 150ms;
 }
 
-.transition {
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
-  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-  transition-duration: 150ms;
+.duration-200 {
+  transition-duration: 200ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 .ease-in {
@@ -3224,24 +3203,12 @@ footer svg {
     margin-bottom: 3rem;
   }
 
-  .md\:mt-8 {
-    margin-top: 2rem;
-  }
-
-  .md\:mt-20 {
-    margin-top: 5rem;
-  }
-
-  .md\:mt-12 {
-    margin-top: 3rem;
+  .md\:mb-16 {
+    margin-bottom: 4rem;
   }
 
   .md\:mt-16 {
     margin-top: 4rem;
-  }
-
-  .md\:mb-16 {
-    margin-bottom: 4rem;
   }
 
   .md\:block {
@@ -3268,6 +3235,10 @@ footer svg {
     max-height: 100%;
   }
 
+  .md\:w-1\/2 {
+    width: 50%;
+  }
+
   .md\:w-3\/5 {
     width: 60%;
   }
@@ -3280,13 +3251,19 @@ footer svg {
     width: auto;
   }
 
-  .md\:w-1\/2 {
-    width: 50%;
-  }
-
   .md\:min-w-max {
     min-width: -moz-max-content;
     min-width: max-content;
+  }
+
+  .md\:translate-x-1\/2 {
+    --tw-translate-x: 50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:-translate-x-1\/2 {
+    --tw-translate-x: -50%;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
   .md\:flex-row {
@@ -3357,10 +3334,6 @@ footer svg {
 
   .md\:pl-0 {
     padding-left: 0px;
-  }
-
-  .md\:text-center {
-    text-align: center;
   }
 
   .md\:text-5xl {

@@ -29,6 +29,8 @@
             </ul>
             <?php endif ?>
         </footer>
+
+        <script src="/assets/scripts/all.js" defer></script>
     
     </body>
 </html>

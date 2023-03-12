@@ -3,7 +3,7 @@
     <?php snippet('nav'); ?>
 
     <main class="px-4 mx-auto max-w-7xl">
-        <?php snippet('title-default', ['title' => $page->title()]); ?>
+        <?php snippet('title', ['title' => $page->title()]); ?>
         <ul class="flex flex-col gap-12">
             <?php foreach($page->children() as $edition): ?>
                 <li class="flex gap-12 items-start max-w-full text-xl md:text-7xl">

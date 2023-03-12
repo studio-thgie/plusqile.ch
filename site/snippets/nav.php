@@ -1,4 +1,4 @@
-<nav class="flex items-start border-black md:border-b-2">
+<nav class="flex items-start border-black main-nav md:border-b-2">
     <ul class="flex z-20 gap-4 p-2 font-mono text-2xl font-bold text-white bg-black md:p-4 md:text-5xl">
         <?php foreach($kirby->languages() as $language): ?>
             <li>

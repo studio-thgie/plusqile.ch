@@ -3,7 +3,7 @@
     <?php snippet('nav'); ?>
 
         <main class="px-4 mx-auto max-w-7xl">
-            <?php snippet('title-default', ['title' => $page->title()]); ?>
+            <?php snippet('title', ['title' => $page->title()]); ?>
             <div class="mb-8 max-w-5xl text-base font-light md:text-5xl">
                 <?= $page->text_bottom() ?>
             </div>

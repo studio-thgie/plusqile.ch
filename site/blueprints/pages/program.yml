@@ -5,3 +5,5 @@ sections:
     type: pages
     template: event
     layout: cards
+    image:
+      cover: true

@@ -21,7 +21,7 @@
     
     <?php $menu = $site->main_menu()->toPages(); ?>
     <?php if ($menu->isNotEmpty()) : ?>
-    <ul id="nav" class="flex overflow-hidden absolute top-0 left-0 z-10 flex-col flex-wrap gap-y-6 pt-20 pr-4 pb-8 pl-4 w-full max-h-0 text-3xl bg-white shadow-2xl opacity-0 transition-opacity md:bg-transparent md:static md:max-h-full md:opacity-100 md:gap-x-14 md:flex-row md:gap-y-4 md:shadow-none md:py-10 md:w-auto md:pl-0">
+    <ul id="nav" class="flex overflow-hidden absolute top-0 left-0 z-10 flex-col flex-wrap gap-y-6 pt-20 pr-4 pb-8 pl-4 w-full max-h-0 text-3xl bg-white shadow-2xl opacity-0 transition-opacity md:bg-transparent md:static md:max-h-full md:opacity-100 md:gap-x-14 md:flex-row md:gap-y-4 md:shadow-none md:py-6 md:w-auto md:pl-0">
         <?php foreach ($menu as $menuItem) : ?>
             <li><a class="px-2 rounded-full border md:hover:bg-transparent md:hover:text-black md:p-0 md:border-none border-red hover:bg-red hover:text-white md:hover:underline" href="<?= $menuItem->url() ?>"><?= $menuItem->title() ?></a></li>
         <?php endforeach ?>

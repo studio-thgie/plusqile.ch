@@ -69,6 +69,9 @@
         <?php foreach($page->children() as $event): ?>
             <?php snippet('event', ['event' => $event, 'horizontal' => false]); ?>
         <?php endforeach ?>
+        <section class="mb-20 w-full isotope-item md:w-1/2 all">
+            <img src="/assets/illustrations/2_PROGRAMM/PROGRAMM_IlluElement <?= rand(1, 10) ?>.svg" alt="">
+        </section>
     </main>
     
     <script src="/assets/node_modules/isotope-layout/dist/isotope.pkgd.min.js" defer></script>

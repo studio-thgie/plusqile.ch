@@ -34,6 +34,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
+    if(document.querySelector('.title-illustration')) {
+        let illustration = document.querySelector('.title-illustration');
+
+        document.addEventListener('scroll', evt => {
+
+            let scroll_distance = document.querySelector('.main-nav').offsetHeight;
+
+            if(scroll_distance < get_scroll()[1]) {
+            } else {
+            }
+        })
+    }
 });
 
 function get_scroll() {

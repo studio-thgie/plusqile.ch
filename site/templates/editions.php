@@ -21,7 +21,7 @@
                     </li>
                 <?php endforeach ?>
             </ul>
-            <div class="flex-grow" style="min-width: 180px">
+            <div class="flex-grow" style="min-width: 180px; max-width: 240px;">
                 <img src="/assets/illustrations/6_EDITIONS/EDITIONS_Element 2.svg" alt="">
             </div>
         </div>

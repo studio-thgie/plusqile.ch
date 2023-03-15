@@ -12,8 +12,12 @@
                 <?php foreach($page->children() as $edition): ?>
                     <li class="flex gap-4 items-start max-w-full text-xl md:gap-12 md:text-5xl">
                         <span class="px-4 py-2 text-white rounded-full bg-red"><?= $edition->title() ?></span>
-                        <a href="<?= $edition->program()->toFile() ?>" class="px-4 py-2 font-mono font-bold bg-white rounded-full border border-red hover:bg-red hover:text-white">Programme</a>
-                        <a href="<?= $edition->gallery()->toPage()->url() ?>" class="px-4 py-2 font-mono font-bold bg-white rounded-full border border-red hover:bg-red hover:text-white">Galerie</a>
+                        <?php if($edition->program()->isNotEmpty()): ?>
+                            <a href="<?= $edition->program()->toFile() ?>" class="px-4 py-2 font-mono font-bold bg-white rounded-full border border-red hover:bg-red hover:text-white">Programme</a>
+                        <?php endif ?>
+                        <?php if($edition->gallery()->isNotEmpty()): ?>
+                            <a href="<?= $edition->gallery()->toPage()->url() ?>" class="px-4 py-2 font-mono font-bold bg-white rounded-full border border-red hover:bg-red hover:text-white">Galerie</a>
+                        <?php endif ?>
                     </li>
                 <?php endforeach ?>
             </ul>

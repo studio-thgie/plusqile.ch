@@ -7,9 +7,28 @@ columns:
       fields:
         type: fields
         fields:
-          text:
-            type: writer
-            size: huge
+          blocks:
+            label: Content
+            type: structure
+            fields:
+              text:
+                label: Text
+                type: writer
+              illustration:
+                width: 1/2
+                label: Illustration
+                type: files
+                multiple: false
+              illustration_position:
+                width: 1/2
+                label: Position of Illustration
+                type: select
+                options:
+                  top: Top
+                  right: Right
+                  bottom: Bottom
+                  left: Left
+
   sidebar:
     width: 1/3
     sections:

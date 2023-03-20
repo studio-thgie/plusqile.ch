@@ -28,14 +28,14 @@
                     </form>
                 </div>
                 <div class="w-full md:w-1/2">
-                    <!-- <div class="flex items-end w-1/2">
+                    <div class="flex items-end w-1/2">
                         <div class="relative">
                             <a class="inline-block max-w-lg italic btn-benevoles font-condensed" href="https://plusqile23.gevma.ch" target="_blank">
                                 <img class="w-full" src="/assets/graphics/button.svg" alt="Bénévoles Button Background">
                                 <span class="absolute top-24 left-24 text-white text-10rem">Béné-<br>Voles</span>
                             </a>
                         </div>
-                    </div> -->
+                    </div>
                 </div>
             </div>
             <div class="mb-5 max-w-5xl text-base font-light md:text-5xl">

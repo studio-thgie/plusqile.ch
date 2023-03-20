@@ -9,7 +9,7 @@
         <?php
             $blocks = $page->blocks()->toStructure();
             foreach ($blocks as $block): ?>
-            <div class="flex <?= $block->illustration_position() ?>">
+            <div class="flex <?= $block->illustration_position() ?> gap-4">
                 <div>
                     <?= $block->text() ?>
                 </div>

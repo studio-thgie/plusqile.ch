@@ -9,15 +9,17 @@
         <?php
             $blocks = $page->blocks()->toStructure();
             foreach ($blocks as $block): ?>
-            <div class="flex">
+            <div class="flex <?= $block->illustration_position() ?>">
                 <div>
                     <?= $block->text() ?>
                 </div>
+                <?php if($block->illustration()->isNotEmpty()): ?>
                 <div class="flex-grow" style="min-width: 180px; max-width: 240px;">
                     <?php foreach ($block->illustration()->toFiles() as $image): ?>
                         <img src="<?= $image->url() ?>">
                     <?php endforeach ?>
                 </div>
+                <?php endif ?>
             </div>
         <?php endforeach ?>
     </main>

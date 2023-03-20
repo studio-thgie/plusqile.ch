@@ -24,10 +24,10 @@ columns:
                 label: Position of Illustration
                 type: select
                 options:
-                  top: Top
-                  right: Right
-                  bottom: Bottom
-                  left: Left
+                  flex-col-reverse: Top
+                  flex-row: Right
+                  flex-col: Bottom
+                  flex-row-reverse: Left
 
   sidebar:
     width: 1/3

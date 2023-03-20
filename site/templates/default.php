@@ -13,7 +13,7 @@
                 <div>
                     <?= $block->text() ?>
                 </div>
-                <div>
+                <div class="flex-grow" style="min-width: 180px; max-width: 240px;">
                     <?php foreach ($block->illustration()->toFiles() as $image): ?>
                         <img src="<?= $image->url() ?>">
                     <?php endforeach ?>

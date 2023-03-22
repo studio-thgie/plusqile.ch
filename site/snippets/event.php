@@ -22,7 +22,14 @@
     </div>
     <?php endif ?>
     <div class="px-4 mb-8 text-base font-light md:text-4xl md:px-8">
-        <?= $event->description() ?>
+        <div class="overflow-hidden h-full max-h-20 transition-all description">
+            <?= $event->description() ?>
+        </div>
+        <div class="mt-4 text-center">
+            <button class="show-description">
+                <img src="/assets/graphics/arrow-down.svg" alt="Arrow down">
+            </button>
+        </div>
     </div>
     <?php if($event->performances()->isNotEmpty()): ?>
     <div class="px-4 mb-8 text-sm md:text-3xl md:px-8 text-red">

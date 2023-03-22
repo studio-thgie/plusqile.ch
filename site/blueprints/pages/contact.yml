@@ -10,12 +10,32 @@ columns:
           text_top:
             label: Text Top
             type: writer
+          options_a_propos:
+            label: Options À Propos
+            type: structure
+            fields:
+              option:
+                type: text
           text_bottom:
             label: Text Bottom
             type: writer
   sidebar:
     width: 1/3
     sections:
+      options:
+        type: fields 
+        fields:
+          benevoles_toggle:
+            label: Show Bénévoles Button
+            type: toggle
+            text: 
+              - "No"
+              - "Yes"
+          benevoles_url:
+            label: Bénévoles URL
+            type: url
+            when:
+              benevoles_toggle: true
       pages:
         type: pages
         template: contact

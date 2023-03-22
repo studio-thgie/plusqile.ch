@@ -26,4 +26,14 @@ function init() {
             })
         })
     })
+
+    document.querySelectorAll('.show-description').forEach(el => {
+        el.addEventListener('click', (evt) => {
+            let target = evt.currentTarget.parentNode.parentNode.querySelector('.description');
+            target.classList.toggle('max-h-20')
+            evt.currentTarget.parentNode.removeChild(evt.currentTarget)
+
+            iso.arrange()
+        })
+    })
 }

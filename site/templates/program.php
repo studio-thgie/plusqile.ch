@@ -40,6 +40,16 @@
                     <button class="px-4 text-2xl font-medium rounded-full border-2 transition-colors md:text-6xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="<?= $date ?>"><?= $date ?></button>
                 </li>
             <?php endforeach ?>
+            <?php if($page->program()->isNotEmpty()): ?>
+            <li>
+                <a href="<?= $page->program()->toFile() ?>" class="px-4 text-base font-medium rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white transition-color" >Le Programme en PDF</a>
+            </li>
+            <?php endif ?>
+            <?php if($page->artists()->isNotEmpty()): ?>
+            <li>
+                <a href="<?= $page->artists()->toPage()->url() ?>" class="px-4 text-base font-medium rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white transition-color" ><?= $page->artists()->toPage()->title() ?></a>
+            </li>
+            <?php endif ?>
         </ul>
         <ul class="flex gap-3 mb-2">
             <li>

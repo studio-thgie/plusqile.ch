@@ -1,9 +1,28 @@
 title: Program
 
-sections:
-  pages:
-    type: pages
-    template: event
-    layout: cards
-    image:
-      cover: true
+columns:
+  main:
+    width: 2/3
+    sections:
+      pages:
+        width: 2/3
+        type: pages
+        template: event
+        layout: cards
+        image:
+          cover: true
+  sidebar:
+    width: 1/3
+    sections:
+      fields:
+        type: fields
+        fields:
+          program:
+            label: Program PDF
+            type: files
+            multiple: false
+          artists:
+            label: Link to Artists page
+            type: pages
+            template: artists
+            max: 1

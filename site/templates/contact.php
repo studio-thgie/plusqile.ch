@@ -2,9 +2,9 @@
 
     <?php snippet('nav'); ?>
 
-        <main class="px-4 mx-auto max-w-7xl">
+        <main class="px-4 mx-auto max-w-7xl default">
             <?php snippet('title', ['title' => $page->title()]); ?>
-            <div class="mb-8 max-w-5xl text-base font-light md:text-5xl">
+            <div class="mb-8 max-w-5xl">
                 <?= $page->text_bottom() ?>
             </div>
             <div class="static gap-8 mb-9 md:flex">
@@ -32,10 +32,7 @@
                 <div class="w-full md:w-1/2">
                     <?php if($page->benevoles_toggle() == 'true'): ?>
                         <div class="relative">
-                            <a class="italic btn-benevoles font-condensed" href="<?= $page->benevoles_url() ?>" target="_blank">
-                                <img class="w-full" src="/assets/graphics/button.svg" alt="Bénévoles Button Background">
-                                <span class="absolute top-24 left-24 text-white drop-shadow-xl" style="font-size: 15vw; line-height: 1;">Béné-<br>Voles</span>
-                            </a>
+                            <?= snippet('btn-benevoles', ['url' => $page->benevoles_url()]); ?>
                         </div>
                     <?php else: ?>
                         <div class="relative">
@@ -45,7 +42,7 @@
                     <?php endif ?>
                 </div>
             </div>
-            <div class="mb-5 max-w-5xl text-base font-light md:text-5xl">
+            <div class="mb-5 max-w-5xl">
                 <?= $page->text_bottom() ?>
             </div>
             <?php if($page->type() == 'contact'): ?>

@@ -7,8 +7,9 @@
 /* base stuff */
 @layer base {
     h1 {
-        @apply text-3xl;
-        @apply md:text-10rem;
+        @apply text-4xl;
+        @apply md:text-6xl;
+        @apply lg:text-9xl;
         @apply font-mono;
         @apply font-bold;
         @apply break-words;
@@ -20,7 +21,9 @@
         @apply px-10;
         @apply mb-12;
         @apply font-mono;
-        @apply text-7xl;
+        @apply text-2xl;
+        @apply sm:text-5xl;
+        @apply lg:text-7xl;
         @apply font-bold;
         @apply bg-white;
         @apply rounded-full;
@@ -30,7 +33,7 @@
     main.default p, main.default ul {
         @apply text-base;
         @apply font-light;
-        @apply md:text-3xl;
+        @apply lg:text-2xl;
         
         margin-bottom: 2rem;
     }
@@ -123,4 +126,15 @@ footer svg {
 .past-editions:hover:before,
 .past-editions:hover:after {
     width: 45%;
+}
+
+.btn-benevoles {
+    font-size: 15vw;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .btn-benevoles {
+        font-size: 35vw;
+    }
 }

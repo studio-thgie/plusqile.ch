@@ -9,24 +9,40 @@
             </div>
             <div class="static gap-8 mb-9 md:flex">
                 <div class="w-full md:w-1/2">
-                    <form class="flex flex-col gap-5 mb-8 max-w-xl">
-                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="text" placeholder="Nom" required>
-                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="text" placeholder="Prénom" required>
-                        <div class="flex flex-col text-xl bg-white rounded-3xl border md:text-3xl border-red">
-                            <input class="px-4 py-2 rounded-3xl focus:outline-none" type="text" placeholder="Rue / N°">
-                            <input class="px-4 py-2 rounded-3xl focus:outline-none" type="text" placeholder="NPA">
+                    <?php if($success): ?>
+                    <div class="alert success">
+                        <p><?= t('email_success') ?></p>
+                    </div>
+                    <?php else: ?>
+                        <?php if (isset($alert['error'])): ?>
+                            <div class="alert error"><?= $alert['error'] ?><?= t($alert['error']) ?></div>
+                        <?php endif ?>
+                    <?php endif ?>
+                    <form class="flex flex-col gap-5 mb-8 max-w-xl" method="post" action="<?= $page->url() ?>">
+                        <div class="honeypot">
+                            <label for="website">Website <abbr title="required">*</abbr></label>
+                            <input type="url" id="website" name="website" tabindex="-1">
                         </div>
-                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="email" placeholder="E-mail" required>
-                        <select class="px-4 py-2 text-xl bg-white rounded-3xl border md:text-3xl focus:outline-none border-red" name="apropos" id="apropos">
-                            <option value="">À propos:</option>
+                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="text" placeholder="<?= t('last_name') ?>" value="<?= esc($data['last_name'] ?? '', 'attr') ?>" name="last_name" required>
+                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="text" placeholder="<?= t('first_name') ?>" value="<?= esc($data['first_name'] ?? '', 'attr') ?>" name="first_name" required>
+                        <div class="flex flex-col text-xl bg-white rounded-3xl border md:text-3xl border-red">
+                            <input class="px-4 py-2 rounded-3xl focus:outline-none" value="<?= esc($data['street'] ?? '', 'attr') ?>" name="street" type="text" placeholder="<?= t('street_number') ?>">
+                            <div class="flex">
+                                <input class="px-4 py-2 w-28 rounded-3xl focus:outline-none" type="text" value="<?= esc($data['zip'] ?? '', 'attr') ?>" name="zip" placeholder="<?= t('zip') ?>">
+                                <input class="px-4 py-2 rounded-3xl focus:outline-none" type="text" value="<?= esc($data['location'] ?? '', 'attr') ?>" name="location" placeholder="<?= t('location') ?>">
+                            </div>
+                        </div>
+                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="email" placeholder="<?= t('email') ?>" required value="<?= esc($data['email'] ?? '', 'attr') ?>" name="email">
+                        <select class="px-4 py-2 text-xl bg-white rounded-3xl border md:text-3xl focus:outline-none border-red" name="subject" id="subject">
+                            <option value=""><?= t('subject') ?>:</option>
                             <?php
                             $options = $page->options_a_propos()->toStructure();
                             foreach ($options as $option): ?>
                             <option value="<?= $option->option() ?>"><?= $option->option() ?></option>
                             <?php endforeach ?>
                         </select>
-                        <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" name="message" id="message" cols="30" rows="10" placeholder="Communication"></textarea>
-                        <input class="px-4 py-2 text-xl text-left bg-white rounded-3xl border transition-colors cursor-pointer md:text-3xl border-red hover:bg-red hover:text-white" type="submit" value="Envoi">
+                        <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" name="text" id="text" cols="30" rows="10" placeholder="<?= t('message') ?>"><?= esc($data['text'] ?? '') ?></textarea>
+                        <input class="px-4 py-2 text-xl text-left bg-white rounded-3xl border transition-colors cursor-pointer md:text-3xl border-red hover:bg-red hover:text-white" type="submit" name="submit" value="<?= t('send') ?>">
                     </form>
                 </div>
                 <div class="w-full md:w-1/2">
@@ -51,5 +67,12 @@
             </div>
             <?php endif ?>
         </main>
+
+        <style>
+            .honeypot {
+                position: absolute;
+                left: -9999px;
+            }
+        </style>
 
 <?php snippet('footer'); ?>

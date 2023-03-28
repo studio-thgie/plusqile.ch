@@ -13,11 +13,11 @@
     <?php if($event->artist()->isNotEmpty()): ?>
     <div class="px-4 mb-8 md:px-8">
         <a href="<?= $event->artist()->toPage()->url() ?>" class="block text-xl md:text-5xl artists text-red hover:underline"><?= $event->artist()->toPage()->title() ?></a>
-        <span class="block text-xl md:text-4xl category"><?= $event->category() ?></span>
+        <span class="block text-xl md:text-4xl category"><?= t($event->category()) ?></span>
         <span class="text-xl md:text-4xl meta">
             <span class="font-light duration"><?= $event->duration() ?></span> / 
-            <span class="font-bold age"><?= $event->age() ?></span> / 
-            <span class="font-light language"><?= $event->language() ?></span>
+            <span class="font-bold age"><?= join(' ', [t('age_from'), t($event->age()), t('age_years')]) ?></span> / 
+            <span class="font-light language"><?= t($event->language()) ?></span>
         </span>
     </div>
     <?php endif ?>
@@ -33,7 +33,7 @@
     </div>
     <?php if($event->performances()->isNotEmpty()): ?>
     <div class="px-4 mb-8 text-sm md:text-3xl md:px-8 text-red">
-        <span>Toutes représentations:</span>
+        <span><?= t('all_shows') ?>:</span>
         <table>
             <?php
             $performances = $event->performances()->toStructure();

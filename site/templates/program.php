@@ -42,7 +42,7 @@
             <?php endforeach ?>
             <?php if($page->program()->isNotEmpty()): ?>
             <li>
-                <a href="<?= $page->program()->toFile() ?>" class="px-4 text-base font-medium rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white transition-color" >Le Programme en PDF</a>
+                <a href="<?= $page->program()->toFile() ?>" class="px-4 text-base font-medium rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white transition-color" ><?= t('program_pdf') ?></a>
             </li>
             <?php endif ?>
             <?php if($page->artists()->isNotEmpty()): ?>
@@ -53,23 +53,23 @@
         </ul>
         <ul class="flex gap-3 mb-2">
             <li>
-                <button class="px-4 text-base text-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all">all</button>
+                <button class="px-4 text-base text-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('all') ?></button>
             </li>
             <?php foreach ($categories as $category): ?>
                 <li>
-                    <button class="px-4 text-base rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $category ?>"><?= $category ?></button>
+                    <button class="px-4 text-base rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $category ?>"><?= t($category) ?></button>
                 </li>
             <?php endforeach ?>
         </ul>
         <ul class="flex gap-3">
             <?php foreach ($ages as $age): ?>
                 <li>
-                    <button class="px-4 text-base rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $age ?>"><?= $age ?></button>
+                    <button class="px-4 text-base rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $age ?>"><?= t($age) ?>+</button>
                 </li>
             <?php endforeach ?>
             <?php foreach ($languages as $language): ?>
                 <li>
-                    <button class="px-4 text-base rounded-full border-2 md:text-3xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="<?= $language ?>"><?= $language ?></button>
+                    <button class="px-4 text-base rounded-full border-2 md:text-3xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="<?= $language ?>"><?= t($language) ?></button>
                 </li>
             <?php endforeach ?>
         </ul>

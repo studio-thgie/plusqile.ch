@@ -36,4 +36,11 @@ function init() {
             iso.arrange()
         })
     })
+
+    document.querySelector('.toggle-filter').addEventListener('click', () =>{
+        document.querySelector('.filter').classList.toggle('left-0')
+        document.querySelector('.filter').classList.toggle('-left-10')
+        document.querySelector('.filter').classList.toggle('translate-x-0')
+        document.querySelector('.filter').classList.toggle('-translate-x-full')
+    })
 }

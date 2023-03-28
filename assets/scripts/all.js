@@ -47,6 +47,28 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     }
+
+    if(document.querySelector('.filter')) {
+        let filter_wrapper = document.querySelector('.filter-wrapper'),
+            events = document.querySelector('.events');
+
+        document.addEventListener('scroll', evt => {
+
+            let scroll_distance = document.querySelector('.main-nav').offsetHeight;
+
+            if(scroll_distance < get_scroll()[1]) {
+                events.style.marginTop = (filter_wrapper.offsetHeight+60)+'px'
+                filter_wrapper.classList.add('fixed')
+                filter_wrapper.classList.add('top-0')
+
+            } else {
+                filter_wrapper.classList.remove('fixed')
+                filter_wrapper.classList.remove('top-0')
+                events.style.marginTop = '0px'
+
+            }
+        })
+    }
 });
 
 function get_scroll() {

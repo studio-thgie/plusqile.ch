@@ -23,7 +23,7 @@
                 </div>
                 <?php foreach($gallery->images() as $image): ?>
                     <div class="p-4 w-full md:w-1/2 isotope-item y-<?= $gallery->title() ?> all">
-                        <?= $image->thumb(['width' => 1024, 'format' => 'webp']) ?>
+                        <img class="w-full rounded-full" src="<?= $image->thumb(['width' => 960, 'format' => 'webp', 'class' => 'rounded-full'])->url() ?>" loading="lazy">
                     </div>
                 <?php endforeach ?>
             <?php endforeach ?>

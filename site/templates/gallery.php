@@ -4,7 +4,7 @@
 
     <main class="grid grid-cols-2 gap-4 px-4 macy">
         <?php foreach($page->images() as $image): ?>
-            <?= $image->thumb(['width' => 1024, 'format' => 'webp']) ?>
+            <img class="w-full rounded-full" src="<?= $image->thumb(['width' => 960, 'format' => 'webp', 'class' => 'rounded-full'])->url() ?>" loading="lazy">
         <?php endforeach ?>
     </main>
 

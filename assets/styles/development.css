@@ -30,6 +30,9 @@
         @apply border-2;
         @apply border-red;
     }
+    a {
+        @apply underline;
+    }
     main.default p, main.default ul {
         @apply text-base;
         @apply font-light;

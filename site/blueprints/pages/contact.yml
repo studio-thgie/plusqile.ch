@@ -1,5 +1,10 @@
 title: Contact
 
+options:
+  changeTemplate:
+    - default
+    - contact
+
 columns:
   main:
     width: 2/3

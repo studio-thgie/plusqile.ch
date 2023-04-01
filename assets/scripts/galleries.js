@@ -10,7 +10,9 @@ function init() {
         transitionDuration: '0.25s'
     });
     document.querySelectorAll('.isotope-item img').forEach(el => {
+        console.log(el)
         el.addEventListener('load', () => {
+            console.log('reload')
             iso.arrange();
         })
     })

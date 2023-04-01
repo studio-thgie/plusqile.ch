@@ -44,4 +44,6 @@ columns:
       pages:
         label: Subpages
         type: pages
-        template: default
+        templates:
+          - default
+          - contact

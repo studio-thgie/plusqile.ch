@@ -30,7 +30,7 @@
         @apply border-2;
         @apply border-red;
     }
-    a {
+    main.default a {
         @apply underline;
     }
     main.default p, main.default ul {

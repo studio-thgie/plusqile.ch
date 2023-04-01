@@ -21,11 +21,11 @@
                 <div class="inline-block font-mono text-3xl font-bold sm:text-6xl xl:text-9xl hover:text-white hover:text-right">
                     <?= $page->info_text() ?>
                 </div>
-                <ul class="flex gap-7 mb-8 text-xs xl:text-xl">
+                <!--<ul class="flex gap-7 mb-8 text-xs xl:text-xl">
                     <li><a class="underline" href="#">Programme</a></li>
                     <li><a class="underline" href="#">Billetterie</a></li>
                     <li><a class="underline" href="#">Offree générale</a></li>
-                </ul>
+                </ul>-->
                 <div class="text-2xl font-bold text-white sm:text-4xl xl:text-7xl font-condensed"><?= $page->headline() ?></div>
             </section>
             <?php if($page->gallery()->isNotEmpty()): ?>
@@ -37,9 +37,9 @@
                         <img class="w-full rounded-full" src="<?= $page->gallery_cover()->toFile()->url() ?>" alt="Impression 1">
                         <?php endif ?>
 
-                        <ul class="flex gap-7 text-xs xl:text-xl">
+                        <!--<ul class="flex gap-7 text-xs xl:text-xl">
                             <li><a class="underline" href="#">Gallery</a></li>
-                        </ul>
+                        </ul>-->
                     </a>
                 </section>
             <?php endif ?>
@@ -65,12 +65,12 @@
                 <?php $artists = $page->artists()->toPage() ?>
                 <section class="p-4 w-full md:w-1/2 isotope-item">
                     <a href="<?= $artists->url() ?>" class="text-3xl italic font-black sm:text-6xl xl:text-9xl hover:text-white hover:font-works hover:font-bold"><?= $page->artists_label()->title() ?></a>
-                    <ul class="flex grid-cols-2 gap-7 text-xs md:grid xl:text-xl">
+                    <!--<ul class="flex grid-cols-2 gap-7 text-xs md:grid xl:text-xl">
                         <li><a class="underline" href="#">Bios</a></li>
                         <li><a class="underline" href="#">Galerie</a></li>
                         <li><a class="underline" href="#">Liens</a></li>
                         <li><a class="underline" href="#">Instagram</a></li>
-                    </ul>
+                    </ul>-->
                 </section>
             <?php endif ?>
             <?php if($page->the_festival()->isNotEmpty()): ?>

@@ -9,6 +9,11 @@ function init() {
         itemSelector: '.isotope-item',
         transitionDuration: '0.25s'
     });
+    document.querySelectorAll('.isotope-item img').forEach(el => {
+        el.addEventListener('load', () => {
+            iso.arrange();
+        })
+    })
 
     document.querySelectorAll('.filter-btn').forEach(el => {
         el.addEventListener('click', evt => {

@@ -16,12 +16,14 @@ return [
         'performance' => 'Performance',
         'object_theater' => 'Manipulation d’objets',
         'puppets' => 'Marionnette',
-        'three' => '3',
-        'four' => '4',
-        'five' => '5',
-        'six' => '6',
-        'seven' => '7',
-        'eight' => '8',
+        'three' => '3+',
+        'four' => '4+',
+        'five' => '5+',
+        'six' => '6+',
+        'seven' => '7+',
+        'eight' => '8+',
+        'nine' => '9+',
+        'ten' => '10+',
         'all' => 'Tout public',
         'adults' => 'Adulte',
         'german' => 'DE',
@@ -46,6 +48,7 @@ return [
         'error_email' => 'Veuillez entrer un e-mail valide.',
         'error_text' => 'Veuillez écrire votre message.',
         'error_mail_sent' => 'Le mail n\'a pas pu être envoyé.',
+        'reset' => 'Réinitialiser'
     ],
     'url' => '/'
 ];

@@ -16,20 +16,27 @@
         <span class="block text-xl md:text-4xl category"><?= t($event->category()) ?></span>
         <span class="text-xl md:text-4xl meta">
             <span class="font-light duration"><?= $event->duration() ?></span> / 
-            <span class="font-bold age"><?= join(' ', [t('age_from'), t($event->age()), t('age_years')]) ?></span> / 
-            <span class="font-light language"><?= t($event->language()) ?></span>
+            <span class="font-bold age"><?= join(' ', [t('age_from'), t($event->age()), t('age_years')]) ?></span>
+            <?php if($event->language()->isNotEmpty()): ?>
+            / <span class="font-light language"><?= t($event->language()) ?></span>
+            <?php endif ?>
+            <?php if($event->place()->isNotEmpty()): ?>
+            / <span class="font-light place"><?= $event->place() ?></span>
+            <?php endif ?>
         </span>
     </div>
     <?php endif ?>
     <div class="px-4 mb-8 text-base font-light md:text-4xl md:px-8">
+        <?php if($event->description()->isNotEmpty()): ?>
         <div class="overflow-hidden h-full max-h-20 transition-all description">
             <?= $event->description() ?>
         </div>
         <div class="mt-4 text-center">
-            <button class="show-description">
+            <button class="cursor-pointer show-description">
                 <img src="/assets/graphics/arrow-down.svg" alt="Arrow down">
             </button>
         </div>
+        <?php endif ?>
     </div>
     <?php if($event->performances()->isNotEmpty()): ?>
     <div class="px-4 mb-8 text-sm md:text-3xl md:px-8 text-red">
@@ -53,7 +60,7 @@
     <?php endif ?>
 
     <div class="<?php if($horizontal): ?>w-full md:w-2/5<?php else: ?>px-4 md:px-8<?php endif ?>">
-        <?php if($event->cover()->isNotEmpty()): ?>
+        <?php if($event->cover()->toFile()): ?>
         <img class="rounded-full" src="<?= $event->cover()->toFile()->thumb(['width' => 960, 'format' => 'webp'])->url() ?>" alt="Programme 1">
         <?php endif ?>
     </div>

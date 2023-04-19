@@ -15,14 +15,14 @@
                 }
             }
 
-            if(!in_array($event->category(), $categories)) {
+            if(!in_array($event->category(), $categories) && $event->category() != '') {
                 $categories[] = $event->category();
             }
 
-            if(!in_array($event->age(), $ages)) {
+            if(!in_array($event->age(), $ages) && $event->age() != '') {
                 $ages[] = $event->age();
             }
-            if(!in_array($event->language(), $languages)) {
+            if(!in_array($event->language(), $languages) && $event->language() != '') {
                 $languages[] = $event->language();
             }
         }
@@ -61,7 +61,7 @@
             </ul>
             <ul class="flex gap-3 mb-2">
                 <li>
-                    <button class="px-4 text-base text-white bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('all') ?></button>
+                    <button class="px-4 text-base text-white bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('reset') ?></button>
                 </li>
                 <?php foreach ($categories as $category): ?>
                     <li>
@@ -72,7 +72,7 @@
             <ul class="flex gap-3">
                 <?php foreach ($ages as $age): ?>
                     <li>
-                        <button class="px-4 text-base bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $age ?>"><?= t($age) ?>+</button>
+                        <button class="px-4 text-base bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $age ?>"><?= t($age) ?></button>
                     </li>
                 <?php endforeach ?>
                 <?php foreach ($languages as $language): ?>

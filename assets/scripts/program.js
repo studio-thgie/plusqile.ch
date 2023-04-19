@@ -27,16 +27,6 @@ function init() {
         })
     })
 
-    document.querySelectorAll('.show-description').forEach(el => {
-        el.addEventListener('click', (evt) => {
-            let target = evt.currentTarget.parentNode.parentNode.querySelector('.description');
-            target.classList.toggle('max-h-20')
-            evt.currentTarget.parentNode.removeChild(evt.currentTarget)
-
-            iso.arrange()
-        })
-    })
-
     document.querySelector('.toggle-filter').addEventListener('click', () =>{
         document.querySelector('.filter').classList.toggle('left-0')
         document.querySelector('.filter').classList.toggle('-left-10')

@@ -53,6 +53,8 @@
     <?php endif ?>
 
     <div class="<?php if($horizontal): ?>w-full md:w-2/5<?php else: ?>px-4 md:px-8<?php endif ?>">
+        <?php if($event->cover()->isNotEmpty()): ?>
         <img class="rounded-full" src="<?= $event->cover()->toFile()->thumb(['width' => 960, 'format' => 'webp'])->url() ?>" alt="Programme 1">
+        <?php endif ?>
     </div>
 </section>

@@ -42,10 +42,13 @@ columns:
           category:
             type: select
             options:
-              circque: Circque
-              concert: Concert
-              acrobatie: Acrobatie
-              compte: Compte
+              circque: Cirque / Zirkus
+              concert: Concert / Konzert
+              clown: Clown / Clown
+              theater: Théâtre / Theater
+              performance: Performance / Performanz
+              object_theater: Manipulation d’objets / Objekttheater
+              puppets: Marionnette / Marionetten
           age:
             type: select
             options:
@@ -55,11 +58,25 @@ columns:
               six: 6+
               seven: 7+
               eight: 8+
-              all: Toute Âge
+              nine: 9+
+              ten: 10+
+              adults: Adulte / Erwachsene
+              all: Tout public / Für alle
+          place:
+            type: select
+            options:
+              - Scène mystère
+              - Chapiteau orange
+              - Chapiteau rouge
+              - Chapiteau noir
+              - Apocalypso
+              - Caillebotis
+              - Grande scène
+              - Portique
           language:
             type: select
             options:
               german: DE
               french: FR
               nv: NV
-
+              multi: Multilingual

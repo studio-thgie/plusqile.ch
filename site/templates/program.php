@@ -61,7 +61,7 @@
             </ul>
             <ul class="flex gap-3 mb-2">
                 <li>
-                    <button class="px-4 text-base text-white bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('reset') ?></button>
+                    <button class="px-4 text-base text-white bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('show_all') ?></button>
                 </li>
                 <?php foreach ($categories as $category): ?>
                     <li>

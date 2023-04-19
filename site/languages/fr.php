@@ -48,7 +48,8 @@ return [
         'error_email' => 'Veuillez entrer un e-mail valide.',
         'error_text' => 'Veuillez écrire votre message.',
         'error_mail_sent' => 'Le mail n\'a pas pu être envoyé.',
-        'reset' => 'Réinitialiser'
+        'reset' => 'Réinitialiser',
+        'show_all' => 'Montrer tout'
     ],
     'url' => '/'
 ];

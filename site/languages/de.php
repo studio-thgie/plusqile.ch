@@ -48,7 +48,8 @@ return [
         'error_email' => 'Bitte geben Sie eine gültige E-Mail-Adresse ein.',
         'error_text' => 'Bitte geben Sie Ihre Nachricht ein.',
         'error_mail_sent' => 'Die E-Mail konnte nicht gesendet werden.',
-        'reset' => 'Zurücksetzen'
+        'reset' => 'Zurücksetzen',
+        'show_all' => 'Alles zeigen'
     ],
     'url' => NULL
 ];

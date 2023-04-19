@@ -11,4 +11,10 @@ columns:
             layout: cards
             image:
               cover: true
+          youtube:
+            type: structure
+            fields:
+              id:
+                type: text
+                label: Youtube ID
 

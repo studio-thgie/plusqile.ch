@@ -42,9 +42,9 @@ return function($kirby, $pages, $page) {
             try {
                 $kirby->email([
                     'template' => 'email',
-                    'from'     => 'y@thgie.ch',
+                    'from'     => 'communication@plusqile.ch',
                     'replyTo'  => $data['email'],
-                    'to'       => 'y@thgie.ch',
+                    'to'       => 'communication@plusqile.ch',
                     'subject'  => 'À propos: ' . esc(join(', ', get('subject'))),
                     'data'     => [
                         'first_name' => esc($data['first_name']),

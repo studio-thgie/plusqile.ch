@@ -52,7 +52,7 @@
                             </label><br>
                             <?php endforeach ?>
                         </div>
-                        <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" name="text" id="text" cols="30" rows="10" placeholder="<?= t('message') ?>"><?= esc($data['text'] ?? '') ?></textarea>
+                        <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" name="text" id="text" cols="30" rows="10" required placeholder="<?= t('message') ?>"><?= esc($data['text'] ?? '') ?></textarea>
                         <input class="px-4 py-2 text-xl text-left bg-white rounded-3xl border transition-colors cursor-pointer md:text-3xl border-red hover:bg-red hover:text-white" type="submit" name="submit" value="<?= t('send') ?>">
                     </form>
                 </div>

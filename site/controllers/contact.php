@@ -39,7 +39,7 @@ return function($kirby, $pages, $page) {
         // some of the data is invalid
         if($invalid = invalid($data, $rules, $messages)) {
             $alert = $invalid;
-            // the data is fine, let's send the email
+        // the data is fine, let's send the email
         } else {
             try {
                 $kirby->email([
@@ -68,7 +68,7 @@ return function($kirby, $pages, $page) {
 
             // no exception occurred, let's send a success message
             if (empty($alert) === true) {
-                $success = 'success';
+                $success = true;
                 $data = [];
             }
         }

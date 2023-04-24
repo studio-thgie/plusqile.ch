@@ -22,17 +22,15 @@ return function($kirby, $pages, $page) {
         ];
 
         $rules = [
-            'first_name'  => ['required', 'minLength' => 3],
-            'last_name'  => ['required', 'minLength' => 3],
+            'first_name'  => ['required'],
+            'last_name'  => ['required'],
             'email' => ['required', 'email'],
-            'text'  => ['required', 'minLength' => 3, 'maxLength' => 3000],
         ];
 
         $messages = [
             'first_name'  => 'error_name',
             'last_name'  => 'error_name',
             'email' => 'error_email',
-            'text'  => 'error_text'
         ];
 
 
@@ -45,7 +43,7 @@ return function($kirby, $pages, $page) {
                 $kirby->email([
                     'template' => 'email',
                     'from'     => 'y@thgie.ch',
-                    'replyTo'  => $data['email'],
+                    'replyTo'  => esc($data['email']),
                     'to'       => 'y@thgie.ch',
                     'subject'  => 'À propos: ' . esc(join(', ', get('subject'))),
                     'data'     => [

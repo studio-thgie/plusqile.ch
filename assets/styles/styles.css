@@ -1132,12 +1132,12 @@ main.default ul li p:last-of-type {
   margin-bottom: 2.25rem;
 }
 
-.mb-24 {
-  margin-bottom: 6rem;
-}
-
 .mb-2 {
   margin-bottom: 0.5rem;
+}
+
+.mb-24 {
+  margin-bottom: 6rem;
 }
 
 .mt-0 {
@@ -1252,8 +1252,16 @@ main.default ul li p:last-of-type {
   height: 2.25rem;
 }
 
+.h-8 {
+  height: 2rem;
+}
+
 .h-40 {
   height: 10rem;
+}
+
+.h-6 {
+  height: 1.5rem;
 }
 
 .max-h-20 {
@@ -1302,6 +1310,10 @@ main.default ul li p:last-of-type {
 
 .w-40 {
   width: 10rem;
+}
+
+.w-6 {
+  width: 1.5rem;
 }
 
 .max-w-5xl {
@@ -3208,6 +3220,10 @@ footer svg {
   .btn-benevoles {
     font-size: 35vw;
   }
+}
+
+.checked\:bg-red:checked {
+  background-color: #f00;
 }
 
 .hover\:border-white:hover {

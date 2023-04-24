@@ -35,6 +35,7 @@ return function($kirby, $pages, $page) {
             'text'  => 'error_text'
         ];
 
+
         // some of the data is invalid
         if($invalid = invalid($data, $rules, $messages)) {
             $alert = $invalid;
@@ -46,7 +47,7 @@ return function($kirby, $pages, $page) {
                     'from'     => 'y@thgie.ch',
                     'replyTo'  => $data['email'],
                     'to'       => 'y@thgie.ch',
-                    'subject'  => esc(get('subject')),
+                    'subject'  => 'À propos: ' . esc(join(', ', get('subject'))),
                     'data'     => [
                         'first_name' => esc($data['first_name']),
                         'last_name' => esc($data['last_name']),

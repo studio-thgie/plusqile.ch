@@ -33,14 +33,25 @@
                             </div>
                         </div>
                         <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="email" placeholder="<?= t('email') ?>" required value="<?= esc($data['email'] ?? '', 'attr') ?>" name="email">
-                        <select class="px-4 py-2 text-xl bg-white rounded-3xl border md:text-3xl focus:outline-none border-red" name="subject" id="subject">
+                        <!--<select class="px-4 py-2 text-xl bg-white rounded-3xl border md:text-3xl focus:outline-none border-red" name="subject" id="subject">
                             <option value=""><?= t('subject') ?>:</option>
                             <?php
                             $options = $page->options_a_propos()->toStructure();
                             foreach ($options as $option): ?>
                             <option value="<?= $option->option() ?>"><?= $option->option() ?></option>
                             <?php endforeach ?>
-                        </select>
+                        </select>-->
+                        <div>
+                            <span class="inline-block px-4 py-2 mb-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red"><?= t('subject') ?>:</span><br>
+                            <?php
+                            $options = $page->options_a_propos()->toStructure();
+                            foreach ($options as $option): ?>
+                            <label class="px-4 py-2 text-xl md:text-3xl">
+                                <input class="inline-block w-6 h-6 rounded-3xl border appearance-none focus:outline-none border-red checked:bg-red" type="checkbox" value="<?= $option->option() ?>" name="subject[]"/>
+                                <?= $option->option() ?>
+                            </label><br>
+                            <?php endforeach ?>
+                        </div>
                         <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" name="text" id="text" cols="30" rows="10" placeholder="<?= t('message') ?>"><?= esc($data['text'] ?? '') ?></textarea>
                         <input class="px-4 py-2 text-xl text-left bg-white rounded-3xl border transition-colors cursor-pointer md:text-3xl border-red hover:bg-red hover:text-white" type="submit" name="submit" value="<?= t('send') ?>">
                     </form>

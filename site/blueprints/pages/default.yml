@@ -28,6 +28,13 @@ columns:
                   flex-row: Right
                   flex-col: Bottom
                   flex-row-reverse: Left
+              map:
+                label: Show map
+                type: toggle
+                text: 
+                  - "No"
+                  - "Yes"
+
 
   sidebar:
     width: 1/3

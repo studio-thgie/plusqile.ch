@@ -49,7 +49,8 @@ return [
         'error_text' => 'Veuillez écrire votre message.',
         'error_mail_sent' => 'Le mail n\'a pas pu être envoyé.',
         'reset' => 'Réinitialiser',
-        'show_all' => 'Montrer tout'
+        'show_all' => 'Montrer tout',
+        'map' => 'Carte'
     ],
     'url' => '/'
 ];

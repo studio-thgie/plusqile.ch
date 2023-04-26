@@ -78,7 +78,7 @@
             <?php endforeach ?>
         </ul>
         <div class="relative left-0 mt-4 filter transition-all translate-x-0 md:mt-16 subfilter-wrapper">
-            <ul class="flex gap-3 mb-4 md:mb-16">
+            <ul class="flex flex-wrap gap-3 mb-4 md:mb-16">
                 <?php if($page->program()->isNotEmpty()): ?>
                 <li>
                     <a href="<?= $page->program()->toFile() ?>" class="px-4 text-base font-medium bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white transition-color" ><?= t('program_pdf') ?></a>
@@ -86,11 +86,11 @@
                 <?php endif ?>
                 <?php if($page->artists()->isNotEmpty()): ?>
                 <li>
-                    <a href="<?= $page->artists()->toPage()->url() ?>" class="px-4 text-base font-medium bg-white rounded-full border-2 transition-colors pointer-events-auto  md:text-3xl border-red hover:bg-red hover:text-white transition-color" ><?= $page->artists()->toPage()->title() ?></a>
+                    <a href="<?= $page->artists()->toPage()->url() ?>" class="px-4 text-base font-medium bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white transition-color" ><?= $page->artists()->toPage()->title() ?></a>
                 </li>
                 <?php endif ?>
             </ul>
-            <ul class="flex gap-3 mb-2">
+            <ul class="flex flex-wrap gap-3 mb-2">
                 <li>
                     <button class="px-4 text-base text-white bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('show_all') ?></button>
                 </li>
@@ -100,7 +100,7 @@
                     </li>
                 <?php endforeach ?>
             </ul>
-            <ul class="flex gap-3">
+            <ul class="flex flex-wrap gap-3">
                 <?php foreach ($ages as $age): ?>
                     <li>
                         <button class="px-4 text-base bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white filter-btn" data-filter="<?= $age['value'] ?>"><?= $age['label'] ?></button>

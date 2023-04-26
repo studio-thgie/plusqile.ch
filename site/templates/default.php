@@ -21,6 +21,9 @@
                 </div>
                 <?php endif ?>
             </div>
+            <?php if($block->map() == 'true'): ?>
+                <iframe class="mx-auto mt-4 mb-8 w-full max-w-5xl rounded-full border-2 border-red" src="https://snazzymaps.com/embed/439750" width="100%" height="600px"></iframe>
+            <?php endif ?>
         <?php endforeach ?>
     </main>
 

@@ -1084,6 +1084,11 @@ main.default ul li p:last-of-type {
   margin-right: 0.5rem;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
 .mb-12 {
   margin-bottom: 3rem;
 }

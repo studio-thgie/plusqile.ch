@@ -49,7 +49,8 @@ return [
         'error_text' => 'Bitte geben Sie Ihre Nachricht ein.',
         'error_mail_sent' => 'Die E-Mail konnte nicht gesendet werden.',
         'reset' => 'Zurücksetzen',
-        'show_all' => 'Alles zeigen'
+        'show_all' => 'Alles zeigen',
+        'map' => 'Karte'
     ],
     'url' => NULL
 ];

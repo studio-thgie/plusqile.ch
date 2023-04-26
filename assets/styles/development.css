@@ -33,14 +33,14 @@
     main.default a {
         @apply underline;
     }
-    main.default p, main.default ul {
+    main.default p, main.default ul:not('.pagenav') {
         @apply text-base;
         @apply font-light;
         @apply lg:text-2xl;
         
         margin-bottom: 2rem;
     }
-    main.default ul {
+    main.default ul:not('.pagenav') {
         @apply pl-8;
         @apply list-disc;
         @apply list-outside;

@@ -6,6 +6,10 @@
         <?php snippet('title', ['title' => $page->title()]); ?>
         <?php snippet('cover'); ?>
 
+        <?php if($page->pagenav() == 'true'): ?>
+            <ul class="flex flex-wrap gap-3 mb-14 pagenav"></ul>
+        <?php endif ?>
+
         <?php
             $blocks = $page->blocks()->toStructure();
             foreach ($blocks as $block): ?>

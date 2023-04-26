@@ -101,6 +101,42 @@ document.addEventListener('DOMContentLoaded', () => {
             })
         })
     }
+
+    if(document.querySelector('.pagenav')) {
+        let header = document.querySelectorAll('main h2'),
+            pagenav = document.querySelector('.pagenav');
+
+        header.forEach(el => {
+            let item = document.createElement('li'),
+                anchor = document.createElement('a'),
+                label = el.innerText || el.textContent;
+
+            anchor.setAttribute('class', 'px-4 text-base bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white filter-btn');
+            anchor.style.textDecoration = 'none'
+
+            anchor.innerHTML = label;
+            anchor.href = '#'+slugify(label)
+            el.id = slugify(label)
+
+            anchor.addEventListener('click', evt => {
+                evt.preventDefault()
+                let target = document.querySelector('#'+evt.currentTarget.href.split('#')[1]);
+
+                let title = document.querySelector('.title-wrapper');
+
+                title.classList.remove('md:translate-x-1/2')
+                title.querySelector('h1').classList.remove('md:-translate-x-1/2')
+                title.querySelector('h1').classList.add('md:text-7xl')
+                
+                setTimeout(() => {
+                    target.scrollIntoView();
+                }, 300);
+            })
+
+            item.appendChild(anchor)
+            pagenav.appendChild(item)
+        })
+    }
 });
 
 function get_scroll() {
@@ -115,3 +151,11 @@ function get_scroll() {
         return [sx, sy];
     }
 }
+
+const slugify = str =>
+  str
+    .toLowerCase()
+    .trim()
+    .replace(/[^\w\s-]/g, '')
+    .replace(/[\s_-]+/g, '-')
+    .replace(/^-+|-+$/g, '');

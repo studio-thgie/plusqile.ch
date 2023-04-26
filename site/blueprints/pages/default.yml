@@ -48,6 +48,12 @@ columns:
             layout: cards
             image:
               cover: true
+          pagenav:
+            label: Show page navigation
+            type: toggle
+            text: 
+              - "No"
+              - "Yes"
       pages:
         label: Subpages
         type: pages

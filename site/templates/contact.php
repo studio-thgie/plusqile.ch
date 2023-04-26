@@ -23,16 +23,16 @@
                             <label for="website">Website <abbr title="required">*</abbr></label>
                             <input type="url" id="website" name="website" tabindex="-1">
                         </div>
-                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="text" placeholder="<?= t('last_name') ?>" value="<?= esc($data['last_name'] ?? '', 'attr') ?>" name="last_name" required>
-                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="text" placeholder="<?= t('first_name') ?>" value="<?= esc($data['first_name'] ?? '', 'attr') ?>" name="first_name" required>
+                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red placeholder:text-black" type="text" placeholder="<?= t('last_name') ?>" value="<?= esc($data['last_name'] ?? '', 'attr') ?>" name="last_name" required>
+                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red placeholder:text-black" type="text" placeholder="<?= t('first_name') ?>" value="<?= esc($data['first_name'] ?? '', 'attr') ?>" name="first_name" required>
                         <div class="flex flex-col text-xl bg-white rounded-3xl border md:text-3xl border-red">
-                            <input class="px-4 py-2 rounded-3xl focus:outline-none" value="<?= esc($data['street'] ?? '', 'attr') ?>" name="street" type="text" placeholder="<?= t('street_number') ?>">
+                            <input class="px-4 py-2 rounded-3xl focus:outline-none placeholder:text-black" value="<?= esc($data['street'] ?? '', 'attr') ?>" name="street" type="text" placeholder="<?= t('street_number') ?>">
                             <div class="flex">
-                                <input class="px-4 py-2 w-28 rounded-3xl focus:outline-none" type="text" value="<?= esc($data['zip'] ?? '', 'attr') ?>" name="zip" placeholder="<?= t('zip') ?>">
-                                <input class="px-4 py-2 rounded-3xl focus:outline-none" type="text" value="<?= esc($data['location'] ?? '', 'attr') ?>" name="location" placeholder="<?= t('location') ?>">
+                                <input class="px-4 py-2 w-28 rounded-3xl focus:outline-none placeholder:text-black" type="text" value="<?= esc($data['zip'] ?? '', 'attr') ?>" name="zip" placeholder="<?= t('zip') ?>">
+                                <input class="px-4 py-2 rounded-3xl focus:outline-none placeholder:text-black" type="text" value="<?= esc($data['location'] ?? '', 'attr') ?>" name="location" placeholder="<?= t('location') ?>">
                             </div>
                         </div>
-                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" type="email" placeholder="<?= t('email') ?>" required value="<?= esc($data['email'] ?? '', 'attr') ?>" name="email">
+                        <input class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red placeholder:text-black" type="email" placeholder="<?= t('email') ?>" required value="<?= esc($data['email'] ?? '', 'attr') ?>" name="email">
                         <!--<select class="px-4 py-2 text-xl bg-white rounded-3xl border md:text-3xl focus:outline-none border-red" name="subject" id="subject">
                             <option value=""><?= t('subject') ?>:</option>
                             <?php
@@ -52,7 +52,7 @@
                             </label><br>
                             <?php endforeach ?>
                         </div>
-                        <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red" name="text" id="text" cols="30" rows="10" required placeholder="<?= t('message') ?>"><?= esc($data['text'] ?? '') ?></textarea>
+                        <textarea class="px-4 py-2 text-xl rounded-3xl border md:text-3xl focus:outline-none border-red placeholder:text-black" name="text" id="text" cols="30" rows="10" required placeholder="<?= t('message') ?>"><?= esc($data['text'] ?? '') ?></textarea>
                         <input class="px-4 py-2 text-xl text-left bg-white rounded-3xl border transition-colors cursor-pointer md:text-3xl border-red hover:bg-red hover:text-white" type="submit" name="submit" value="<?= t('send') ?>">
                     </form>
                 </div>

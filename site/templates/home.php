@@ -16,9 +16,9 @@
             </a>
         <?php endif ?>
 
-        <main class="flex gap-4 mx-2 mt-10 isotope">
-            <section class="p-4 w-full md:w-1/2 isotope-item">
-                <div class="inline-block font-mono text-3xl font-bold sm:text-6xl xl:text-9xl hover:text-white hover:text-right">
+        <main class="grid grid-cols-1 gap-4 mx-2 mt-10 md:grid-cols-2">
+            <section class="p-4">
+                <div class="inline-block font-mono text-6xl font-bold sm:text-7xl xl:text-9xl hover:text-white hover:text-right">
                     <?= $page->info_text() ?>
                 </div>
                 <!--<ul class="flex gap-7 mb-8 text-xs xl:text-xl">
@@ -30,7 +30,7 @@
             </section>
             <?php if($page->gallery()->isNotEmpty()): ?>
                 <?php $gallery = $page->gallery()->toPage() ?>
-                <section class="p-4 w-full md:w-1/2 isotope-item">
+                <section class="p-4">
                     <a href="<?= $gallery->url() ?>">
                         <p class="mb-5 text-2xl font-bold text-center sm:text-4xl xl:text-7xl font-condensed"><?= $gallery->title() ?></p>
                         <?php if($page->gallery_cover()->isNotEmpty()): ?>
@@ -45,26 +45,25 @@
             <?php endif ?>
             <?php if($page->association()->isNotEmpty()): ?>
                 <?php $association = $page->association()->toPage() ?>
-                <section class="p-4 w-full md:w-1/2 isotope-item">
-                    <a href="<?= $association->url() ?>">
-                        <p class="px-8 py-4 text-3xl italic font-thin bg-white border border-black sm:text-6xl border-20 xl:text-9xl font-condensed hover:text-white hover:bg-transparent hover:border-white"><?= $page->association_label()->title() ?></p>
+                <section class="flex items-center px-8 py-4 w-full h-full italic font-thin bg-white border border-black border-20 font-condensed hover:text-white hover:bg-transparent hover:border-white">
+                    <a href="<?= $association->url() ?>" class="label-assoc">
+                       <?= $page->association_label()->title() ?>
                     </a>
                 </section>
             <?php endif ?>
             <?php if($page->become_member()->isNotEmpty()): ?>
                 <?php $become_member = $page->become_member()->toPage() ?>
-                <section class="p-4 w-full md:w-1/2 isotope-item">
-                    <a href="<?= $become_member->url() ?>">
-                        <p class="px-8 py-4 text-3xl italic font-light border-t-4 border-b-4 border-black transition-all sm:text-6xl xl:text-9xl hover:text-white hover:border-white hover:font-bold hover:px-6"><?= $become_member->title() ?></p>
-
-                        <img src="/assets/illustrations/1_HOME/HOME_IlluElement 5.svg" alt="" class="absolute bottom-0 -right-2 w-60 pointer-events-none">
+                <section class="flex relative items-center px-8 py-4 italic font-light leading-none border-t-4 border-b-4 border-black transition-all sm:text-6xl xl:text-9xl hover:text-white hover:border-white hover:font-bold hover:px-6">
+                    <a href="<?= $become_member->url() ?>" class="label-members">
+                        <?= $become_member->title() ?>
                     </a>
+                    <img src="/assets/illustrations/1_HOME/HOME_IlluElement 5.svg" alt="" class="absolute bottom-0 -right-2 w-60 pointer-events-none">
                 </section>
             <?php endif ?>
             <?php if($page->artists()->isNotEmpty()): ?>
                 <?php $artists = $page->artists()->toPage() ?>
-                <section class="p-4 w-full md:w-1/2 isotope-item">
-                    <a href="<?= $artists->url() ?>" class="text-3xl italic font-black sm:text-6xl xl:text-9xl hover:text-white hover:font-works hover:font-bold"><?= $page->artists_label()->title() ?></a>
+                <section class="flex items-center">
+                    <a href="<?= $artists->url() ?>" class="p-4 italic font-black hover:text-white hover:font-works hover:font-bold label-artists"><?= $page->artists_label()->title() ?></a>
                     <!--<ul class="flex grid-cols-2 gap-7 text-xs md:grid xl:text-xl">
                         <li><a class="underline" href="#">Bios</a></li>
                         <li><a class="underline" href="#">Galerie</a></li>
@@ -75,8 +74,8 @@
             <?php endif ?>
             <?php if($page->the_festival()->isNotEmpty()): ?>
                 <?php $the_festival = $page->the_festival()->toPage() ?>
-                <section class="p-4 w-full md:w-1/2 isotope-item">
-                    <a href="<?= $the_festival->url() ?>" class="flex flex-col text-2xl font-thin rotate-180 sm:text-4xl hover:text-white xl:text-8xl font-condensed" style="writing-mode: vertical-lr">
+                <section class="">
+                    <a href="<?= $the_festival->url() ?>" class="flex flex-col font-thin rotate-180 hover:text-white font-condensed label-festival" style="writing-mode: vertical-lr">
                         <span><?= $the_festival->title() ?></span>
                         <span><?= $the_festival->title() ?></span>
                         <span><?= $the_festival->title() ?></span>
@@ -87,24 +86,27 @@
                 </section>
             <?php endif ?>
             <?php if($page->benevoles()->isNotEmpty()): ?>
-                <section class="relative p-4 w-full md:w-1/2 isotope-item">
-                    <?= snippet('btn-benevoles', ['url' => $page->benevoles()]); ?>
+                <section class="relative p-4">
+                    <div class="static w-full md:absolute">
+                        <?= snippet('btn-benevoles', ['url' => $page->benevoles()]); ?>
+                    </div>
                 </section>
             <?php endif ?>
             <?php if($page->press()->isNotEmpty()): ?>
                 <?php $press = $page->press()->toPage() ?>
-                <section class="p-4 w-full md:w-1/2 isotope-item">
-                    <a href="<?= $press->url() ?>" class="inline-block relative">
-                        <p class="font-mono text-3xl font-bold sm:text-6xl xl:text-9xl hover:text-white"><?= $press->title() ?></p>
-                        <img src="/assets/illustrations/1_HOME/HOME_IlluElement 6.svg" alt="" class="absolute -bottom-10 -right-32 w-36 pointer-events-none md:bottom-0 md:-right-28">
+                <section class="flex relative items-center p-4">
+                    <a href="<?= $press->url() ?>" class="inline-block relative font-mono font-bold hover:text-white label-press">
+                        <?= $press->title() ?>
                     </a>
+                    <img src="/assets/illustrations/1_HOME/HOME_IlluElement 6.svg" alt="" class="absolute right-0 bottom-0 w-36 pointer-events-none">
                 </section>
             <?php endif ?>
+            <div></div>
             <?php if($page->editions()->isNotEmpty()): ?>
                 <?php $editions = $page->editions()->toPage() ?>
-                <section class="relative p-4 w-full md:w-1/2 isotope-item past-editions">
-                    <a href="<?= $editions->url() ?>">
-                        <p class="py-8 text-3xl font-bold text-center px-auto sm:text-6xl xl:text-9xl font-works hover:text-white"><?= $editions->title() ?></p>
+                <section class="flex relative items-center p-4 past-editions">
+                    <a href="<?= $editions->url() ?>" class="py-8 font-bold text-center px-auto font-works hover:text-white label-editions">
+                        <?= $editions->title() ?>
                     </a>
                     <img class="absolute top-0 left-0 w-auto h-full" src="/assets/graphics/curtain_left.svg" alt="Curtain Left">
                     <img class="absolute top-0 right-0 w-auto h-full" src="/assets/graphics/curtain_right.svg" alt="Curtain Right">

@@ -1,4 +1,4 @@
-<section class="<?php if($horizontal): ?>block md:flex gap-10 px-4 mx-auto max-w-7xl<?php else: ?>isotope-item w-full md:w-1/2<?php endif ?> mb-20 all <?= $event->category() ?> <?= $event->age() ?> <?= $event->language() ?>">
+<section class="<?php if($horizontal): ?>block md:flex gap-10 px-4 mx-auto max-w-7xl<?php else: ?>isotope-item w-full pr-4 md:w-1/2<?php endif ?> mb-20 all <?php $performances = $event->performances()->toStructure(); foreach ($performances as $performance): ?>d<?= $performance->date() ?> <?php endforeach ?> <?= $event->category() ?> <?= $event->age() ?> <?= $event->language() ?>">
 
     <?php if($horizontal): ?>
         <div class="w-full md:w-3/5">
@@ -6,7 +6,7 @@
 
     <span class="inline-block px-4 py-0 mb-5 border-2 md:px-8 md:py-3 border-red" style="border-radius: 80px">
         <?php if($event->performances()->isNotEmpty()): ?>
-        <span class="text-base font-bold md:text-5xl time"><?= $event->performances()->toStructure()->first()->time()->toDate('H:i') ?></span><br>
+        <span class="text-base font-bold md:text-4xl time"><?= $event->performances()->toStructure()->first()->time()->toDate('H:i') ?></span><br>
         <?php endif ?>
         <span class="font-mono text-2xl font-bold md:text-6xl title"><?= $event->title() ?></span>
     </span>
@@ -26,13 +26,13 @@
         </span>
     </div>
     <?php endif ?>
-    <div class="px-4 mb-8 text-base font-light md:text-4xl md:px-8">
+    <div class="px-4 mb-8 text-base font-light md:text-3xl md:px-8">
         <?php if($event->description()->isNotEmpty()): ?>
-        <div class="overflow-hidden h-full max-h-20 transition-all description">
+        <div class="overflow-hidden transition-all duration-300 description">
             <?= $event->description() ?>
         </div>
         <div class="mt-4 text-center">
-            <button class="cursor-pointer show-description">
+            <button class="transition-transform duration-300 rotate-0 cursor-pointer show-description">
                 <img src="/assets/graphics/arrow-down.svg" alt="Arrow down">
             </button>
         </div>

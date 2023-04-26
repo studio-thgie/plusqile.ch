@@ -30,6 +30,11 @@
             <?php endif ?>
         </footer>
 
+        
+        <button class="fixed right-4 bottom-4 z-50 p-3 w-12 h-12 bg-white rounded-full border-2 opacity-0 transition-all rotate-180 cursor-pointer to-top md:text-3xl border-red hover:bg-red hover:text-white transition-color">
+            <img src="/assets/graphics/arrow-down.svg" alt="Arrow down">
+        </button>
+
         <script src="/assets/scripts/all.js" defer></script>
     
     </body>

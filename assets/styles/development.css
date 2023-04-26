@@ -87,7 +87,53 @@
     }
 }
 
+/* custom home stuff */
+.label-assoc {
+    font-size: 12.5vw;
+}
+.label-members {
+    font-size: 9vw;
+}
+.label-festival {
+    font-size: 8vw;
+    line-height: 1;
+}
+.label-artists {
+    font-size: 12.5vw;
+}
+.label-press {
+    font-size: 12.5vw;
+}
+.label-editions {
+    font-size: 8vw;
+    line-height: 1;
+}
+
+@media (max-width: 768px) {
+    .label-assoc {
+        font-size: 20vw;
+    }
+    .label-members {
+        font-size: 16vw;
+    }
+    .label-festival {
+        font-size: 16vw;
+    }
+    .label-artists {
+        font-size: 20vw;
+    }
+    .label-press {
+        font-size: 20vw;
+    }
+    .label-editions {
+        font-size: 16vw;
+    }
+}
+
 /* super custom stuff */
+html {
+    scroll-behavior: smooth;
+}
 a.btn-benevoles {
     width: 40vw;
     height: 40vw;
@@ -140,4 +186,12 @@ footer svg {
     .btn-benevoles {
         font-size: 35vw;
     }
+}
+
+.description {
+    height: 100%;
+    max-height: 75px;
+}
+.description.show {
+    max-height: 1000px;
 }

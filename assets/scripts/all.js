@@ -60,7 +60,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 events.style.marginTop = (filter_wrapper.offsetHeight+60)+'px'
                 filter_wrapper.classList.add('fixed')
                 filter_wrapper.classList.add('top-0')
-
             } else {
                 filter_wrapper.classList.remove('fixed')
                 filter_wrapper.classList.remove('top-0')
@@ -70,14 +69,35 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     }
 
+    document.addEventListener('scroll', evt => {
+
+        let scroll_distance = document.querySelector('.main-nav').offsetHeight;
+
+        if(scroll_distance < get_scroll()[1]) {
+            document.querySelector('.to-top').classList.add('opacity-1')
+            document.querySelector('.to-top').classList.remove('opacity-0')
+        } else {
+            document.querySelector('.to-top').classList.add('opacity-0')
+            document.querySelector('.to-top').classList.remove('opacity-1')
+        }
+    })
+
+    document.querySelector('.to-top').addEventListener('click', () => {
+        window.scrollTo(0, 0)
+    })
+
     if(document.querySelector('.show-description')) {
         document.querySelectorAll('.show-description').forEach(el => {
             el.addEventListener('click', (evt) => {
                 let target = evt.currentTarget.parentNode.parentNode.querySelector('.description');
-                target.classList.toggle('max-h-20')
-                evt.currentTarget.parentNode.removeChild(evt.currentTarget)
+                target.classList.toggle('show')
+                evt.currentTarget.classList.toggle('rotate-0')
+                evt.currentTarget.classList.toggle('rotate-180')
 
                 iso.arrange()
+                setTimeout(() => {
+                    iso.arrange()
+                }, 300);
             })
         })
     }

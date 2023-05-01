@@ -1,4 +1,4 @@
-<section class="<?php if($horizontal): ?>block md:flex gap-10 px-4 mx-auto max-w-7xl<?php else: ?>isotope-item w-full pr-4 md:w-1/2<?php endif ?> mb-20 all <?php $performances = $event->performances()->toStructure(); foreach ($performances as $performance): ?>d<?= $performance->date() ?> <?php endforeach ?> <?= $event->category() ?> <?= $event->age() ?> <?= $event->language() ?>">
+<section class="<?php if($horizontal): ?>block md:flex gap-10 px-4 mx-auto max-w-7xl<?php else: ?>isotope-item w-full pr-4 md:w-1/2<?php endif ?> mb-20 all <?php $performances = $event->performances()->toStructure(); foreach ($performances as $performance): ?>d<?= $performance->date() ?> <?php endforeach ?> <?php foreach ($event->category()->split() as $category): ?><?= $category ?> <?php endforeach ?> <?= $event->age() ?> <?= $event->language() ?>">
 
     <?php if($horizontal): ?>
         <div class="w-full md:w-3/5">
@@ -13,7 +13,7 @@
     <?php if($event->artist()->isNotEmpty()): ?>
     <div class="px-4 mb-8 md:px-8">
         <a href="<?= $event->artist()->toPage()->url() ?>" class="block text-xl md:text-5xl artists text-red hover:underline"><?= $event->artist()->toPage()->title() ?></a>
-        <span class="block text-xl md:text-4xl category"><?= t($event->category()) ?></span>
+        <span class="block text-xl md:text-4xl category"><?php $count = 0; foreach ($event->category()->split() as $category): ?><?php if($count > 0){ echo(', '); } echo(t($category)); $count++; ?><?php endforeach ?></span>
         <span class="text-xl md:text-4xl meta">
             <span class="font-light duration"><?= $event->duration() ?></span>
             <?php if($event->age()->isNotEmpty()): ?>

@@ -40,7 +40,7 @@ columns:
           duration:
             type: text
           category:
-            type: select
+            type: multiselect
             options:
               circque: Cirque / Zirkus
               concert: Concert / Konzert

@@ -15,8 +15,10 @@
                 }
             }
 
-            if(!in_array($event->category(), $categories) && $event->category() != '') {
-                $categories[] = $event->category();
+            foreach ($event->category()->split() as $category) {
+                if(!in_array($category, $categories) && $category != '') {
+                    $categories[] = $category;
+                }
             }
 
             if(!in_array($event->age(), $ages) && $event->age() != '') {

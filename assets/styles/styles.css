@@ -716,11 +716,11 @@ h3 {
   border-color: #f00;
 }
 
-main a {
+main.default a {
   text-decoration-line: underline;
 }
 
-main p, main ul {
+main.default p, main.default ul {
   margin-bottom: 2rem;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -728,23 +728,23 @@ main p, main ul {
 }
 
 @media (min-width: 1024px) {
-  main p, main ul {
+  main.default p, main.default ul {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-main ul:not('.pagenav') {
+main.default ul:not('.pagenav') {
   list-style-position: outside;
   list-style-type: disc;
   padding-left: 2rem;
 }
 
-main ul li {
+main.default ul li {
   padding-left: 0.5rem;
 }
 
-main ul li p {
+main.default ul li p {
   margin-bottom: 0.5rem !important;
 }
 

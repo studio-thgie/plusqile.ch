@@ -44,20 +44,20 @@
         @apply border-2;
         @apply border-red;
     }
-    main a {
+    main.default a {
         @apply underline;
     }
-    main p, main ul {
+    main.default p, main.default ul {
         @apply mb-8 text-base font-light lg:text-xl;
     }
-    main ul:not('.pagenav') {
+    main.default ul:not('.pagenav') {
         @apply pl-8 list-disc list-outside;
     }
 
-    main ul li {
+    main.default ul li {
         @apply pl-2;
     }
-    main ul li p {
+    main.default ul li p {
         @apply mb-2 !important;
     }
 }

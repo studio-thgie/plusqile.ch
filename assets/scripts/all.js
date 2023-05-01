@@ -9,11 +9,11 @@ document.addEventListener('DOMContentLoaded', () => {
             if(scroll_distance < get_scroll()[1]) {
                 title.classList.remove('md:translate-x-1/2')
                 title.querySelector('h1').classList.remove('md:-translate-x-1/2')
-                title.querySelector('h1').classList.add('md:text-7xl')
+                title.querySelector('h1').classList.add('md:text-5xl')
             } else {
                 title.classList.add('md:translate-x-1/2')
                 title.querySelector('h1').classList.add('md:-translate-x-1/2')
-                title.querySelector('h1').classList.remove('md:text-7xl')
+                title.querySelector('h1').classList.remove('md:text-5xl')
             }
         })
     }

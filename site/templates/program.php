@@ -53,7 +53,7 @@
         $_ages = [];
         foreach ($ages as $key => $age) {
             $_ages[] = [
-                'label' => t($age),
+                'label' => t($age.'_short'),
                 'value' => $age,
             ];
         }

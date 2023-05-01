@@ -8,8 +8,8 @@
 @layer base {
     h1 {
         @apply text-4xl;
-        @apply md:text-6xl;
-        @apply lg:text-9xl;
+        @apply md:text-5xl;
+        @apply lg:text-7xl;
         @apply font-mono;
         @apply font-bold;
         @apply break-words;
@@ -18,38 +18,47 @@
     }
     h2 {
         @apply inline-block;
-        @apply px-10;
-        @apply mb-12;
+        @apply px-4;
+        @apply mb-6;
         @apply font-mono;
         @apply text-2xl;
-        @apply sm:text-5xl;
-        @apply lg:text-7xl;
+        @apply sm:text-4xl;
+        @apply lg:text-5xl;
         @apply font-bold;
         @apply bg-white;
         @apply rounded-full;
         @apply border-2;
         @apply border-red;
     }
-    main.default a {
+    h3 {
+        @apply inline-block;
+        @apply px-4;
+        @apply mb-2;
+        @apply font-mono;
+        @apply text-base;
+        @apply sm:text-xl;
+        @apply lg:text-2xl;
+        @apply font-bold;
+        @apply bg-white;
+        @apply rounded-full;
+        @apply border-2;
+        @apply border-red;
+    }
+    main a {
         @apply underline;
     }
-    main.default p, main.default ul:not('.pagenav') {
-        @apply text-base;
-        @apply font-light;
-        @apply lg:text-2xl;
-        
-        margin-bottom: 2rem;
+    main p, main ul {
+        @apply mb-8 text-base font-light lg:text-xl;
     }
-    main.default ul:not('.pagenav') {
-        @apply pl-8;
-        @apply list-disc;
-        @apply list-outside;
+    main ul:not('.pagenav') {
+        @apply pl-8 list-disc list-outside;
     }
-    main.default ul li {
+
+    main ul li {
         @apply pl-2;
     }
-    main.default ul li p:last-of-type {
-        margin-bottom: 0;
+    main ul li p {
+        @apply mb-2 !important;
     }
 }
 

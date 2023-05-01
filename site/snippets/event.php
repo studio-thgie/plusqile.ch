@@ -15,8 +15,10 @@
         <a href="<?= $event->artist()->toPage()->url() ?>" class="block text-xl md:text-5xl artists text-red hover:underline"><?= $event->artist()->toPage()->title() ?></a>
         <span class="block text-xl md:text-4xl category"><?= t($event->category()) ?></span>
         <span class="text-xl md:text-4xl meta">
-            <span class="font-light duration"><?= $event->duration() ?></span> / 
-            <span class="font-bold age"><?= join(' ', [t('age_from'), t($event->age()), t('age_years')]) ?></span>
+            <span class="font-light duration"><?= $event->duration() ?></span>
+            <?php if($event->age()->isNotEmpty()): ?>
+            / <span class="font-bold age"><?= t($event->age()) ?></span>
+            <?php endif ?>
             <?php if($event->language()->isNotEmpty()): ?>
             / <span class="font-light language"><?= t($event->language()) ?></span>
             <?php endif ?>
@@ -46,7 +48,7 @@
             $performances = $event->performances()->toStructure();
             foreach ($performances as $performance): ?>
             <tr>
-                <td class="pr-6"><?= $performance->date()->toDate('D') ?></td>
+                <td class="pr-6"><?= t($performance->date()->toDate('D')) ?></td>
                 <td class="pr-6"><?= $performance->date()->toDate('d') ?></td>
                 <td><?= $performance->time()->toDate('H:i') ?></td>
             </tr>

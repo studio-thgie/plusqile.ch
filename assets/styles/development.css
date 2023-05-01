@@ -50,8 +50,11 @@
     main.default p, main.default ul {
         @apply mb-8 text-base font-light lg:text-xl;
     }
-    main.default ul:not('.pagenav') {
+    main.default ul {
         @apply pl-8 list-disc list-outside;
+    }
+    main.default ul.pagenav {
+        @apply pl-0 list-none;
     }
 
     main.default ul li {

@@ -734,10 +734,15 @@ main.default p, main.default ul {
   }
 }
 
-main.default ul:not('.pagenav') {
+main.default ul {
   list-style-position: outside;
   list-style-type: disc;
   padding-left: 2rem;
+}
+
+main.default ul.pagenav {
+  list-style-type: none;
+  padding-left: 0px;
 }
 
 main.default ul li {

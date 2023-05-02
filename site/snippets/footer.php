@@ -35,6 +35,7 @@
             <img src="/assets/graphics/arrow-down.svg" alt="Arrow down">
         </button>
 
+        <script src="https://unpkg.com/@lottiefiles/lottie-player@0.3.0/dist/lottie-player.js"></script>
         <script src="/assets/scripts/all.js" defer></script>
     
     </body>

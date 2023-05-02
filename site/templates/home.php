@@ -87,13 +87,11 @@
                     </a>
                 </section>
             <?php endif ?>
-            <?php if($page->benevoles()->isNotEmpty()): ?>
-                <section class="relative p-4">
-                    <div class="static w-full md:absolute">
-                        <?= snippet('btn-benevoles', ['url' => $page->benevoles()]); ?>
-                    </div>
-                </section>
-            <?php endif ?>
+            <section class="relative">
+                <div class="static w-full md:absolute">
+                    <?= snippet('btn-benevoles', ['url' => $page->benevoles()]); ?>
+                </div>
+            </section>
             <?php if($page->press()->isNotEmpty()): ?>
                 <?php $press = $page->press()->toPage() ?>
                 <section class="flex relative items-center p-4">
@@ -106,12 +104,15 @@
             <div></div>
             <?php if($page->editions()->isNotEmpty()): ?>
                 <?php $editions = $page->editions()->toPage() ?>
-                <section class="flex relative items-center p-4 past-editions">
-                    <a href="<?= $editions->url() ?>" class="py-8 font-bold text-center px-auto font-works hover:text-white label-editions">
-                        <?= $editions->title() ?>
+                <section class="flex relative items-center">
+                    <a href="<?= $editions->url() ?>" class="">
+                        <div class="hoverEffects">
+                            <lottie-player
+                                src="/assets/animations/editions-hover-in.json"
+                                style="width: 100%;"
+                            ></lottie-player>
+                        </div>
                     </a>
-                    <img class="absolute top-0 left-0 w-auto h-full" src="/assets/graphics/curtain_left.svg" alt="Curtain Left">
-                    <img class="absolute top-0 right-0 w-auto h-full" src="/assets/graphics/curtain_right.svg" alt="Curtain Right">
                 </section>
             <?php endif ?>
         </main>

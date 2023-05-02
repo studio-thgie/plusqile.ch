@@ -32,15 +32,17 @@
                 <?php $gallery = $page->gallery()->toPage() ?>
                 <section class="p-4">
                     <a href="<?= $gallery->url() ?>">
-                        <p class="mb-5 text-2xl font-bold text-center sm:text-4xl xl:text-7xl font-condensed"><?= $gallery->title() ?></p>
-                        <?php if($page->gallery_cover()->isNotEmpty()): ?>
-                        <img class="w-full rounded-full" src="<?= $page->gallery_cover()->toFile()->url() ?>" alt="Impression 1">
-                        <?php endif ?>
-
-                        <!--<ul class="flex gap-7 text-xs xl:text-xl">
-                            <li><a class="underline" href="#">Gallery</a></li>
-                        </ul>-->
+                        <p class="mb-5 text-2xl font-bold text-center sm:text-4xl xl:text-7xl font-condensed hover:underline"><?= $gallery->title() ?></p>
                     </a>
+                    <?php if($page->gallery_images()->isNotEmpty()): ?>
+                        <div class="gallery">
+                            <?php foreach($page->gallery_images()->toFiles() as $image): ?>
+                                <div>
+                                    <img class="w-full rounded-full" src="<?= $image->thumb(['width' => 960, 'format' => 'webp'])->url() ?>" loading="lazy">
+                                </div>
+                            <?php endforeach ?>
+                        </div>
+                    <?php endif ?>
                 </section>
             <?php endif ?>
             <?php if($page->association()->isNotEmpty()): ?>
@@ -123,5 +125,9 @@
 
     </div>
 
-    <script src="/assets/node_modules/isotope-layout/dist/isotope.pkgd.min.js" defer></script>
+    <link rel="stylesheet" href="/assets/scripts/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="/assets/scripts/slick-1.8.1/slick/slick-theme.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/assets/scripts/slick-1.8.1/slick/slick.js" defer></script>
     <script src="/assets/scripts/home.js" defer></script>

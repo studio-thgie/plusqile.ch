@@ -22,15 +22,14 @@ columns:
             label: Program label
             type: writer
           program:
+            label: Program Link
             type: pages
             max: 1
-          gallery_cover:
+          gallery_images:
+            label: Gallery Images
             type: files
-            multiple: false
-            layout: cards
-            image:
-              cover: true
           gallery:
+            label: Galleries Link
             type: pages
             max: 1
           association_label:

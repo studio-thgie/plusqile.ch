@@ -53,8 +53,13 @@
     main.default ul {
         @apply pl-8 list-disc list-outside;
     }
-    main.default ul.pagenav {
+    main.default ul.pagenav,
+    main.default ul.subnav {
         @apply pl-0 list-none;
+    }
+    main.default ul.pagenav li,
+    main.default ul.subnav li {
+        @apply pl-0;
     }
 
     main.default ul li {

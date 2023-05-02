@@ -7,6 +7,13 @@
         <?php snippet('cover'); ?>
 
         <?php if($page->pagenav() == 'true'): ?>
+            <ul class="flex flex-wrap gap-3 mb-14 subnav">
+                <?php foreach ($page->children() as $key => $subpage): ?>
+                    <li>
+                        <a class="px-4 text-base list-none bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-xl border-red hover:bg-red hover:text-white" style="text-decoration: none;" href="<?= $subpage->url() ?>"><?= $subpage->title() ?></a>
+                    </li>
+                <?php endforeach ?>
+            </ul>
             <ul class="flex flex-wrap gap-3 mb-14 pagenav"></ul>
         <?php endif ?>
 

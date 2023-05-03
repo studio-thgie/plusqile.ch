@@ -37,7 +37,7 @@
             <?php endif ?>
         <?php endforeach ?>
 
-        <?php if($page->downloads()->notEmpty()): ?>
+        <?php if($page->downloads()->toFiles()->count()): ?>
             <h2>Downloads</h2>
             <ul class="">
                 <?php foreach ($page->downloads()->toFiles() as $key => $download): ?>

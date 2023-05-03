@@ -27,6 +27,12 @@ function init() {
         })
     })
 
+    document.querySelectorAll('.event-preview').forEach(el => {
+        el.addEventListener('load', () => {
+            iso.arrange()
+        })
+    })
+
     document.querySelector('.toggle-filter').addEventListener('click', () =>{
         document.querySelector('.filter').classList.toggle('left-0')
         document.querySelector('.filter').classList.toggle('-left-10')

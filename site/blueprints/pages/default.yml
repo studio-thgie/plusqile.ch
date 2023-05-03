@@ -34,6 +34,8 @@ columns:
                 text: 
                   - "No"
                   - "Yes"
+          downloads:
+            type: files
 
 
   sidebar:

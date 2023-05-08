@@ -20,10 +20,10 @@
         <link rel="stylesheet" href="/assets/styles/styles.css">
 
         <meta property="og:title" content="<?= $page->title() ?> &mdash; <?= $site->og_title() ?>"/>
-        <?php if($site->og_description() != ''): ?>
+        <?php if($site->og_description()->isNotEmpty()): ?>
         <meta property="og:description" content="<?= $site->og_description() ?>"/>
         <?php endif ?>
-        <?php if($site->og_image()->toFile()->notEmpty()): ?>
+        <?php if($site->og_image()->toFile()->isNotEmpty()): ?>
         <meta property="og:image" content="<?= $site->og_image()->toFile()->crop(1200, 630, [
             'quality' => '90',
             'crop' => 'center'

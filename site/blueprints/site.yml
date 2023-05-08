@@ -24,6 +24,19 @@ columns:
       pages:
         label: All Pages
         type: pages
+      meta:
+        type: fields 
+        fields:
+          og_title:
+            label: Page Title
+            type: text
+          og_description:
+            label: Page Description
+            type: text
+          og_image:
+            label: Social Media Image
+            type: files
+            multiple: false
       menus:
         type: fields 
         fields:

@@ -23,7 +23,7 @@
         <?php if($site->og_description() != ''): ?>
         <meta property="og:description" content="<?= $site->og_description() ?>"/>
         <?php endif ?>
-        <?php if($site->og_image()->notEmpty()): ?>
+        <?php if($site->og_image()->toFile()->notEmpty()): ?>
         <meta property="og:image" content="<?= $site->og_image()->toFile()->crop(1200, 630, [
             'quality' => '90',
             'crop' => 'center'

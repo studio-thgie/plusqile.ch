@@ -6,7 +6,7 @@ columns:
       images:
         type: fields 
         fields:
-          images:
+          gallery:
             type: files
             layout: cards
             image:

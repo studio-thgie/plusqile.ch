@@ -15,7 +15,7 @@
             <div class="p-4 w-full md:w-1/2 isotope-item y-<?= $page->title() ?> all">
                 <span class="inline-block px-4 text-2xl font-medium rounded-full border-2 transition-colors md:text-6xl border-red"><?= $page->title() ?></span>
             </div>
-            <?php foreach($page->images() as $image): ?>
+            <?php foreach($page->gallery()->toFiles() as $image): ?>
                 <div class="p-4 w-full md:w-1/2 isotope-item y-<?= $page->title() ?> all">
                     <img class="w-full rounded-full" src="<?= $image->thumb(['width' => 960, 'format' => 'webp'])->url() ?>" loading="lazy">
                 </div>

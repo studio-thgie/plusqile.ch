@@ -7,9 +7,11 @@
         <?php snippet('cover'); ?>
         <div class="text-base font-light md:text-2xl">
             <?= $page->description() ?>
+            <?php if($page->website()->isNotEmpty()): ?>
             <p class="mt-4">
                 <a href=" <?= $page->website() ?>" class="text-base font-normal md:text-2xl text-red hover:underline"> <?= explode('//', $page->website())[1] ?></a>
             </p>
+            <?php endif ?>
         </div>
     </main>
 

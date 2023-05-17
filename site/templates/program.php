@@ -120,7 +120,7 @@
     </section>
 
     <main class="grid grid-cols-2 gap-4 pt-4 mt-0 events md:m-8 isotope">
-        <?php foreach($page->children() as $event): ?>
+        <?php foreach($page->children()->listed()->sortBy('performances') as $event): ?>
             <?php snippet('event', ['event' => $event, 'horizontal' => false]); ?>
         <?php endforeach ?>
         <section class="mb-20 w-full isotope-item md:w-1/2 all">

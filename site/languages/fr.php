@@ -43,7 +43,7 @@ return [
         'program_pdf' => 'Le Programme en PDF',
         'age_from' => 'Dès',
         'age_years' => 'ans',
-        'all_shows' => 'Plus de représentations',
+        'all_shows' => 'Représentations',
         'last_name' => 'Nom',
         'first_name' => 'Prénom',
         'street_number' => 'Rue / N°',

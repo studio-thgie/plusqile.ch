@@ -6,11 +6,11 @@
 
     <span class="inline-block px-4 py-0 mb-5 border-2 md:px-8 md:py-3 border-red" style="border-radius: 80px">
         <?php if($event->performances()->isNotEmpty()): ?>
-        <span class="text-base font-bold md:text-2xl time">
+        <!-- <span class="text-base font-bold md:text-2xl time">
         <?= t($event->performances()->toStructure()->first()->date()->toDate('D')) ?> 
         <?= $event->performances()->toStructure()->first()->date()->toDate('d') ?>, 
         <?= $event->performances()->toStructure()->first()->time()->toDate('H:i') ?>
-        </span><br>
+        </span><br> -->
         <?php endif ?>
         <span class="font-mono text-2xl font-bold md:text-6xl title"><?= $event->title() ?></span>
     </span>

@@ -21,9 +21,16 @@
             $blocks = $page->blocks()->toStructure();
             foreach ($blocks as $block): ?>
             <div class="flex <?= $block->illustration_position() ?> gap-4">
-                <div>
-                    <?= $block->text() ?>
-                </div>
+                <?php if($block->text()->isNotEmpty()): ?>
+                    <div class="px-4">
+                        <?= $block->text() ?>
+                    </div>
+                <?php endif ?>
+                <?php if($block->image()->isNotEmpty()): ?>
+                    <div class="px-4 w-full">
+                        <img class="mx-auto mb-8 w-full max-w-5xl" src="<?= $block->image()->toFile()->url() ?>">
+                    </div>
+                <?php endif ?>
                 <?php if($block->illustration()->isNotEmpty()): ?>
                 <div class="flex-grow" style="min-width: 180px; max-width: 240px;">
                     <?php foreach ($block->illustration()->toFiles() as $image): ?>

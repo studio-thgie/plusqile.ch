@@ -68,11 +68,12 @@
 
     <section class="left-0 z-50 m-4 pointer-events-none filter-wrapper md:m-8">
         <ul class="flex flex-wrap gap-3">
-            <li>
+            <!-- <li>
                 <button class="px-4 py-3 text-2xl font-medium bg-white rounded-full border-2 transition-colors pointer-events-auto text-red md:text-6xl border-red hover:bg-red hover:text-white transition-color toggle-filter">
                     <?= svg('/assets/graphics/filter.svg') ?>
                 </button>
-            </li>
+            </li> -->
+            
             <?php foreach ($dates as $date): ?>
                 <li>
                     <button class="px-4 text-2xl font-medium bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-6xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="d<?= $date['value'] ?>"><?= $date['label'] ?></button>
@@ -82,6 +83,9 @@
         <div class="relative left-0 filter transition-all translate-x-0 subfilter-wrapper">
             <?php if($page->program()->isNotEmpty() || $page->artists()->isNotEmpty()): ?>
             <ul class="flex flex-wrap gap-3 mt-4 md:mb-16">
+                <li>
+                    <button class="px-4 text-base font-medium bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="all"><?= t('show_all') ?></button>
+                </li>
                 <?php if($page->program()->isNotEmpty()): ?>
                 <li>
                     <a href="<?= $page->program()->toFile() ?>" class="px-4 text-base font-medium bg-white rounded-full border-2 transition-colors md:text-3xl border-red hover:bg-red hover:text-white transition-color" ><?= t('program_pdf') ?></a>
@@ -94,7 +98,7 @@
                 <?php endif ?>
             </ul>
             <?php endif ?>
-            <ul class="flex flex-wrap gap-3 mt-4 mb-2">
+            <!-- <ul class="flex flex-wrap gap-3 mt-4 mb-2">
                 <li>
                     <button class="px-4 text-base text-white bg-white rounded-full border-2 transition-colors pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white filter-btn bg-red" data-filter="all"><?= t('show_all') ?></button>
                 </li>
@@ -115,7 +119,7 @@
                         <button class="px-4 text-base bg-white rounded-full border-2 pointer-events-auto md:text-3xl border-red hover:bg-red hover:text-white transition-color filter-btn" data-filter="<?= $language ?>"><?= t($language) ?></button>
                     </li>
                 <?php endforeach ?>
-            </ul>
+            </ul> -->
         </div>
     </section>
 

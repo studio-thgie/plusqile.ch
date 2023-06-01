@@ -1041,6 +1041,18 @@ main.default ul li p {
   bottom: -2.5rem;
 }
 
+.-top-2 {
+  top: -0.5rem;
+}
+
+.-right-10 {
+  right: -2.5rem;
+}
+
+.-top-14 {
+  top: -3.5rem;
+}
+
 .isolate {
   isolation: isolate;
 }
@@ -1112,19 +1124,9 @@ main.default ul li p {
   margin-right: auto;
 }
 
-.my-2 {
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .mx-2 {
   margin-left: 0.5rem;
   margin-right: 0.5rem;
-}
-
-.my-4 {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
 }
 
 .mb-12 {
@@ -1365,10 +1367,6 @@ main.default ul li p {
 
 .max-w-xl {
   max-width: 36rem;
-}
-
-.max-w-3xl {
-  max-width: 48rem;
 }
 
 .flex-shrink {
@@ -2378,6 +2376,10 @@ main.default ul li p {
   background-color: rgb(255 0 0 / var(--tw-bg-opacity));
 }
 
+.bg-opacity-50 {
+  --tw-bg-opacity: 0.5;
+}
+
 .decoration-slice {
   -webkit-box-decoration-break: slice;
           box-decoration-break: slice;
@@ -2504,6 +2506,26 @@ main.default ul li p {
   padding: 0.25rem;
 }
 
+.p-20 {
+  padding: 5rem;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
+.p-10 {
+  padding: 2.5rem;
+}
+
+.p-14 {
+  padding: 3.5rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
 .px-14 {
   padding-left: 3.5rem;
   padding-right: 3.5rem;
@@ -2567,11 +2589,6 @@ main.default ul li p {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
-}
-
-.px-5 {
-  padding-left: 1.25rem;
-  padding-right: 1.25rem;
 }
 
 .pl-8 {
@@ -3374,6 +3391,11 @@ footer svg {
   background-color: transparent;
 }
 
+.hover\:bg-black:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
 .hover\:px-6:hover {
   padding-left: 1.5rem;
   padding-right: 1.5rem;
@@ -3493,6 +3515,14 @@ footer svg {
 
   .md\:absolute {
     position: absolute;
+  }
+
+  .md\:top-0 {
+    top: 0px;
+  }
+
+  .md\:-right-14 {
+    right: -3.5rem;
   }
 
   .md\:m-8 {
@@ -3621,6 +3651,10 @@ footer svg {
 
   .md\:p-0 {
     padding: 0px;
+  }
+
+  .md\:p-14 {
+    padding: 3.5rem;
   }
 
   .md\:px-8 {

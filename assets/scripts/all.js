@@ -1,4 +1,15 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    let newsletter_popup = document.querySelector('.newsletter-popup');
+
+    document.querySelectorAll('.newsletter-toggle').forEach(btn => {
+        btn.addEventListener('click', () => {
+            newsletter_popup.classList.toggle('opacity-0')
+            newsletter_popup.classList.toggle('opacity-100')
+            newsletter_popup.classList.toggle('invisible')
+        })
+    });
+
     if(document.querySelector('.title-wrapper')) {
         let title = document.querySelector('.title-wrapper');
         

@@ -3,6 +3,7 @@
             <?php $items = $site->footer_menu()->toStructure(); ?>
             <?php if ($items->isNotEmpty()) : ?>
                 <ul class="flex gap-2 justify-center text-xs md:text-3xl">
+                    <li><a href="#" class="inline-block px-3 bg-white rounded-full border-2 border-red text-red hover:bg-red hover:text-white hover:border-white">Newsletter</a></li>
                 <?php foreach ($items as $item) : ?>
                 <?php if ($pageLink = $item->pageLink()->toPage()) : ?>
                     <li><a href="<?= $pageLink->url() ?>" class="inline-block px-3 bg-white rounded-full border-2 border-red text-red hover:bg-red hover:text-white hover:border-white"><?= $item->linkTitle()->or($pageLink->title()) ?></a></li>
@@ -29,7 +30,6 @@
             </ul>
             <?php endif ?>
         </footer>
-
         
         <button class="fixed right-4 bottom-4 z-50 p-3 w-12 h-12 bg-white rounded-full border-2 opacity-0 transition-all rotate-180 cursor-pointer to-top md:text-3xl border-red hover:bg-red hover:text-white transition-color">
             <img src="/assets/graphics/arrow-down.svg" alt="Arrow down">
